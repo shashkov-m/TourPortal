@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+  let images = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack {
@@ -50,10 +51,26 @@ struct MainView: View {
       .background(Color.yellow)
       .cornerRadius(12)
       
-      VStack(alignment: .leading, spacing: 16) {
+      VStack(alignment: .leading, spacing: 0) {
         Text("Популярные направления")
           .font(.headline)
           .padding()
+        ScrollView(.horizontal, showsIndicators: false) {
+          HStack(alignment: .top, spacing: 8) {
+            ForEach(images, id: \.self) { image in
+              VStack(alignment: .leading, spacing: 0) {
+                Image(image)
+                  .resizable()
+                  .frame(width: 100, height: 100)
+                  .cornerRadius(8)
+                Text("Стамбул")
+                Text("от ₽80 000")
+                  .font(.footnote)
+                  .foregroundColor(.gray)
+              }
+            }
+          }
+        }
       }
     }
     .padding()
