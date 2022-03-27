@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainTabView.swift
 //  TourPortal
 //
 //  Created by Max Shashkov on 26.03.2022.
@@ -12,11 +12,19 @@ struct MainTabView: View {
       TabView {
         MainView()
           .tabItem {
-            Label ("Поиск", systemImage: "globe.europe.africa")
+            Label("Поиск", systemImage: "globe.europe.africa")
           }
         NewsfeedView()
           .tabItem {
-            Label ("Новости", systemImage: "newspaper")
+            Label("Новости", systemImage: "newspaper")
+          }
+        ChatView()
+          .tabItem {
+            Label("Контакты", systemImage: "phone.fill")
+          }
+        ProfileView()
+          .tabItem {
+            Label("Профиль", systemImage: "person.fill")
           }
       }
     }
