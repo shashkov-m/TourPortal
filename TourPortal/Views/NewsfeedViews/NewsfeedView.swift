@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct NewsfeedView: View {
+  @State var isShowModal = false
+  var tap: some Gesture {
+    TapGesture(count: 1)
+      .onEnded { _ in
+        isShowModal.toggle()
+      }
+  }
   var body: some View {
     NavigationView {
       ScrollView (.vertical, showsIndicators: false) {
@@ -16,6 +23,10 @@ struct NewsfeedView: View {
           NewsTileView(image: Image ("4"))
           NewsTileView(image: Image ("3"))
         }
+        .sheet(isPresented: $isShowModal) {
+          NewsDetailView(isShowModal: $isShowModal, image: Image("2"))
+        }
+        .gesture(tap)
       }
       .navigationTitle("Новости")
     }

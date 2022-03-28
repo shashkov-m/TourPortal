@@ -34,7 +34,7 @@ struct NewsTileView: View {
 }
 
 struct NewsTileView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsTileView(image: Image ("2"))
-    }
+  static var previews: some View {
+    NewsTileView(image: Image ("2"))
+  }
 }
