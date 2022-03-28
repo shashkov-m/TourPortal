@@ -20,6 +20,7 @@
 		50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */; };
 		50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0927F0E925009F1E80 /* ChatView.swift */; };
 		50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */; };
+		50FF5E1127F2206C009F1E80 /* NewsTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1027F2206C009F1E80 /* NewsTileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRoutesView.swift; sourceTree = "<group>"; };
 		50FF5E0927F0E925009F1E80 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		50FF5E1027F2206C009F1E80 /* NewsTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				50FF5DF727F081A1009F1E80 /* NewsfeedView.swift */,
+				50FF5E1027F2206C009F1E80 /* NewsTileView.swift */,
 			);
 			path = NewsfeedViews;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,
 				50FF5E0127F09D20009F1E80 /* SearchModuleView.swift in Sources */,
+				50FF5E1127F2206C009F1E80 /* NewsTileView.swift in Sources */,
 				50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
 				50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */,
