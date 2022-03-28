@@ -18,6 +18,8 @@
 		50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0227F0A0C2009F1E80 /* LogoView.swift */; };
 		50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */; };
 		50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */; };
+		50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0927F0E925009F1E80 /* ChatView.swift */; };
+		50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		50FF5E0227F0A0C2009F1E80 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRoutesView.swift; sourceTree = "<group>"; };
 		50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRoutesView.swift; sourceTree = "<group>"; };
+		50FF5E0927F0E925009F1E80 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +69,9 @@
 		50FF5DE627EF36E2009F1E80 /* TourPortal */ = {
 			isa = PBXGroup;
 			children = (
-				50FF5DFD27F08C5F009F1E80 /* Styles */,
 				50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */,
 				50FF5DF927F0829A009F1E80 /* Views */,
+				50FF5DFD27F08C5F009F1E80 /* Styles */,
 				50FF5DFA27F082A9009F1E80 /* Model */,
 				50FF5DEB27EF36E4009F1E80 /* Assets.xcassets */,
 				50FF5DED27EF36E4009F1E80 /* Preview Content */,
@@ -87,12 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				50FF5DE927EF36E2009F1E80 /* MainTabView.swift */,
-				50FF5DF527EF38DF009F1E80 /* MainView.swift */,
-				50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */,
-				50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */,
-				50FF5E0227F0A0C2009F1E80 /* LogoView.swift */,
-				50FF5DF727F081A1009F1E80 /* NewsfeedView.swift */,
-				50FF5E0027F09D20009F1E80 /* SearchModuleView.swift */,
+				50FF5E0E27F0EB1F009F1E80 /* SearchViews */,
+				50FF5E0F27F0EB39009F1E80 /* NewsfeedViews */,
+				50FF5E0827F0E90D009F1E80 /* ChatViews */,
+				50FF5E0B27F0EA2D009F1E80 /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +112,42 @@
 				50FF5DFE27F08C7C009F1E80 /* TextIconLabelStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		50FF5E0827F0E90D009F1E80 /* ChatViews */ = {
+			isa = PBXGroup;
+			children = (
+				50FF5E0927F0E925009F1E80 /* ChatView.swift */,
+			);
+			path = ChatViews;
+			sourceTree = "<group>";
+		};
+		50FF5E0B27F0EA2D009F1E80 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		50FF5E0E27F0EB1F009F1E80 /* SearchViews */ = {
+			isa = PBXGroup;
+			children = (
+				50FF5DF527EF38DF009F1E80 /* MainView.swift */,
+				50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */,
+				50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */,
+				50FF5E0227F0A0C2009F1E80 /* LogoView.swift */,
+				50FF5E0027F09D20009F1E80 /* SearchModuleView.swift */,
+			);
+			path = SearchViews;
+			sourceTree = "<group>";
+		};
+		50FF5E0F27F0EB39009F1E80 /* NewsfeedViews */ = {
+			isa = PBXGroup;
+			children = (
+				50FF5DF727F081A1009F1E80 /* NewsfeedView.swift */,
+			);
+			path = NewsfeedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,12 +222,14 @@
 			files = (
 				50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */,
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
+				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,
 				50FF5E0127F09D20009F1E80 /* SearchModuleView.swift in Sources */,
 				50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
+				50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */,
 				50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
