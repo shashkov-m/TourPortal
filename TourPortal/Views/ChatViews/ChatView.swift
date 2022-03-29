@@ -28,9 +28,7 @@ struct ChatView: View {
         .font(.body)
         .foregroundColor(.secondary)
         .padding()
-        Button {
-          print ("")
-        } label: {
+        Link (destination: URL(string: "tel://+79377313180")!) {
           Label("Позвонить", systemImage: "phone.fill")
         }
         .padding()
