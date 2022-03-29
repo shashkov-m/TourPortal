@@ -25,6 +25,7 @@
 		50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */; };
 		50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */; };
 		50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1827F34844009F1E80 /* OfficeMapView.swift */; };
+		50FF5E1B27F3A125009F1E80 /* PhoneCallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1A27F3A125009F1E80 /* PhoneCallButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoucialMediaStackView.swift; sourceTree = "<group>"; };
 		50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeInfoView.swift; sourceTree = "<group>"; };
 		50FF5E1827F34844009F1E80 /* OfficeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeMapView.swift; sourceTree = "<group>"; };
+		50FF5E1A27F3A125009F1E80 /* PhoneCallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				50FF5E0927F0E925009F1E80 /* ChatView.swift */,
+				50FF5E1A27F3A125009F1E80 /* PhoneCallButtonView.swift */,
 				50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */,
 				50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */,
 				50FF5E1827F34844009F1E80 /* OfficeMapView.swift */,
@@ -249,6 +252,7 @@
 				50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
 				50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */,
+				50FF5E1B27F3A125009F1E80 /* PhoneCallButtonView.swift in Sources */,
 				50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */,
 				50FF5E1327F25A06009F1E80 /* NewsDetailView.swift in Sources */,
 			);

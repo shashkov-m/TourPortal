@@ -11,16 +11,7 @@ struct ChatView: View {
   var body: some View {
     ScrollView (.vertical, showsIndicators: false) {
       VStack(spacing: 0) {
-        Image("logo")
-          .resizable()
-          .frame(width: 80, height: 95)
-          .scaledToFit()
-          .clipShape(Circle())
-          .offset(y: 10)
-          .padding(.top, -20)
-        Text("TOUR PORTAL")
-          .font(.largeTitle)
-          .bold()
+        LogoView(text: "TOUR PORTAL")
         Text ("""
 Поможем выбрать тур и решить вопросы во время путешествия, а так же ответим на вопросы по работе приложения
 """)
@@ -28,17 +19,15 @@ struct ChatView: View {
         .font(.body)
         .foregroundColor(.secondary)
         .padding()
-        Link (destination: URL(string: "tel://+79377313180")!) {
-          Label("Позвонить", systemImage: "phone.fill")
-        }
-        .padding()
+        PhoneCallButtonView()
         Divider()
+          .padding()
         Text("Свяжитесь с нами в соцсетях и\nмессенджерах")
           .font(.body)
           .multilineTextAlignment(.center)
           .foregroundColor(.secondary)
-          .padding()
         SoucialMediaStackView()
+          .padding(.top)
         Divider()
           .padding()
         OfficeInfoView()

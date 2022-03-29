@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct LogoView: View {
+  var text:String
   var body: some View {
     VStack (spacing: 0) {
-      Image ("logo")
+      Image ("logo2")
         .resizable()
-        .frame(width: 80, height: 95)
+        .frame(width: 70, height: 80)
         .scaledToFit()
-        .clipShape(Circle())
-      Text("Поиск выгодных\nтуров")
+      Text(text)
         .multilineTextAlignment(.center)
         .font(.title.bold())
     }
@@ -24,7 +24,6 @@ struct LogoView: View {
 
 struct LogoView_Previews: PreviewProvider {
   static var previews: some View {
-    LogoView()
-      .background(Color (UIColor.systemGroupedBackground))
+    LogoView(text: "Поиск выгодных\nтуров")
   }
 }

@@ -11,7 +11,7 @@ struct MainView: View {
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack {
-        LogoView()
+        LogoView(text: "Поиск выгодных\nтуров")
         SearchModuleView()
         PopularRoutesView()
         AvailableRoutesView()
