@@ -24,6 +24,7 @@
 		50FF5E1327F25A06009F1E80 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1227F25A06009F1E80 /* NewsDetailView.swift */; };
 		50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */; };
 		50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */; };
+		50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1827F34844009F1E80 /* OfficeMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		50FF5E1227F25A06009F1E80 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoucialMediaStackView.swift; sourceTree = "<group>"; };
 		50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeInfoView.swift; sourceTree = "<group>"; };
+		50FF5E1827F34844009F1E80 /* OfficeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				50FF5E0927F0E925009F1E80 /* ChatView.swift */,
 				50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */,
 				50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */,
+				50FF5E1827F34844009F1E80 /* OfficeMapView.swift */,
 			);
 			path = ChatViews;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */,
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
 				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
+				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,

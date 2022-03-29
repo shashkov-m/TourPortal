@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ChatView: View {
-    var body: some View {
-      VStack(spacing:0) {
+  var body: some View {
+    ScrollView (.vertical, showsIndicators: false) {
+      VStack(spacing: 0) {
         Image("logo")
           .resizable()
           .frame(width: 80, height: 95)
           .scaledToFit()
           .clipShape(Circle())
-          .offset(y: 20)
+          .offset(y: 10)
           .padding(.top, -20)
-      Text("TOUR PORTAL")
-        .font(.largeTitle)
-        .bold()
+        Text("TOUR PORTAL")
+          .font(.largeTitle)
+          .bold()
         Text ("""
 Поможем выбрать тур и решить вопросы во время путешествия, а так же ответим на вопросы по работе приложения
 """)
@@ -43,13 +44,14 @@ struct ChatView: View {
         Divider()
           .padding()
         OfficeInfoView()
-        Spacer()
+        OfficeMapView()
       }
     }
+  }
 }
 
 struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
-    }
+  static var previews: some View {
+    ChatView()
+  }
 }
