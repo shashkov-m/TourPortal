@@ -16,7 +16,7 @@ struct MainTabView: View {
           }
         NewsfeedView()
           .tabItem {
-            Label("Новости", systemImage: "newspaper")
+            Label("Тур Блог", systemImage: "newspaper")
           }
         ChatView()
           .tabItem {

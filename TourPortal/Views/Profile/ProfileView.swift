@@ -6,15 +6,32 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct ProfileView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State private var isModalPresented = false
+  var body: some View {
+    VStack(spacing: 0) {
+      Text("Войдите в профиль")
+      PSButton(isPresenting: $isModalPresented) {
+        Text("Войти")
+          .bold()
+          .foregroundColor(.white)
+          .frame(maxWidth: .infinity)
+          .padding()
+          .background(Color.blue)
+          .cornerRadius(12)
+      }
+      .padding()
+      Spacer()
     }
+    .partialSheet(isPresented: $isModalPresented, content: AuthView.init)
+  }
 }
 
 struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
+  static var previews: some View {
+    ProfileView()
+      .attachPartialSheetToRoot()
+  }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5039884627F461A900EA01CA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884527F461A900EA01CA /* AuthView.swift */; };
+		5039884927F46A3000EA01CA /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5039884827F46A3000EA01CA /* PartialSheet */; };
+		5039884B27F46DF000EA01CA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884A27F46DF000EA01CA /* File.swift */; };
+		5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884E27F484FB00EA01CA /* WideButtonView.swift */; };
 		50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */; };
 		50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE927EF36E2009F1E80 /* MainTabView.swift */; };
 		50FF5DEC27EF36E4009F1E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FF5DEB27EF36E4009F1E80 /* Assets.xcassets */; };
@@ -29,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5039884527F461A900EA01CA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		5039884A27F46DF000EA01CA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
 		50FF5DE427EF36E2009F1E80 /* TourPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPortalApp.swift; sourceTree = "<group>"; };
 		50FF5DE927EF36E2009F1E80 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5039884927F46A3000EA01CA /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				50FF5E0C27F0EA3C009F1E80 /* ProfileView.swift */,
+				5039884A27F46DF000EA01CA /* File.swift */,
+				5039884527F461A900EA01CA /* AuthView.swift */,
+				5039884E27F484FB00EA01CA /* WideButtonView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -184,6 +195,9 @@
 			dependencies = (
 			);
 			name = TourPortal;
+			packageProductDependencies = (
+				5039884827F46A3000EA01CA /* PartialSheet */,
+			);
 			productName = TourPortal;
 			productReference = 50FF5DE427EF36E2009F1E80 /* TourPortal.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 50FF5DDB27EF36E2009F1E80;
+			packageReferences = (
+				5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 50FF5DE527EF36E2009F1E80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,11 +258,13 @@
 				50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */,
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
 				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
+				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,
 				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,
 				50FF5E0127F09D20009F1E80 /* SearchModuleView.swift in Sources */,
+				5039884627F461A900EA01CA /* AuthView.swift in Sources */,
 				50FF5E1127F2206C009F1E80 /* NewsTileView.swift in Sources */,
 				50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */,
 				50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */,
@@ -254,6 +273,7 @@
 				50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */,
 				50FF5E1B27F3A125009F1E80 /* PhoneCallButtonView.swift in Sources */,
 				50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */,
+				5039884B27F46DF000EA01CA /* File.swift in Sources */,
 				50FF5E1327F25A06009F1E80 /* NewsDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -365,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -391,6 +411,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +441,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5039884827F46A3000EA01CA /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50FF5DDC27EF36E2009F1E80 /* Project object */;
 }
