@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct MainTabView: View {
     var body: some View {
@@ -27,6 +28,7 @@ struct MainTabView: View {
             Label("Профиль", systemImage: "person.fill")
           }
       }
+      .attachPartialSheetToRoot()
     }
 }
 
