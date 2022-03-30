@@ -9,6 +9,8 @@ import SwiftUI
 import PartialSheet
 
 struct AuthView: View {
+  @State private var isEmailTapped = false
+  @Binding var isRootPresented: Bool
   var body: some View {
     VStack(spacing: 8) {
       Text("Вход в профиль")
@@ -18,8 +20,12 @@ struct AuthView: View {
         .foregroundColor(.secondary)
       Group {
         Button {
+          isEmailTapped.toggle()
         } label: {
           WideButtonView(imageName: "mail", text: "Email", backgroundColor: .blue, textColor: .white)
+        }
+        .sheet(isPresented: $isEmailTapped) {
+          EmailAuthView(isPresented: $isEmailTapped, isRootPresented: $isRootPresented)
         }
         Button {
         } label: {
@@ -43,6 +49,7 @@ struct AuthView: View {
 
 struct AuthVIew_Previews: PreviewProvider {
   static var previews: some View {
-    AuthView()
+    AuthView(isRootPresented: .constant(true))
+      .attachPartialSheetToRoot()
   }
 }

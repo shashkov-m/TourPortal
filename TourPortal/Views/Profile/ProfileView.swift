@@ -31,10 +31,13 @@ struct ProfileView: View {
           .cornerRadius(12)
       }
       .padding()
+      Divider()
       Spacer()
     }
     .attachPartialSheetToRoot()
-    .partialSheet(isPresented: $isModalPresented, content: AuthView.init)
+    .partialSheet(isPresented: $isModalPresented) {
+      AuthView(isRootPresented: $isModalPresented)
+    }
   }
 }
 
