@@ -13,6 +13,10 @@
 		5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884E27F484FB00EA01CA /* WideButtonView.swift */; };
 		5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885027F4E85600EA01CA /* EmailAuthView.swift */; };
 		5039885327F502B200EA01CA /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885227F502B200EA01CA /* EmailValidation.swift */; };
+		509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0127F6FB5F0078968E /* EmailTextField.swift */; };
+		509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */; };
+		509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0727F7164B0078968E /* SecureInputView.swift */; };
+		509F4A0A27F72C3F0078968E /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */; };
 		50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */; };
 		50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE927EF36E2009F1E80 /* MainTabView.swift */; };
 		50FF5DEC27EF36E4009F1E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FF5DEB27EF36E4009F1E80 /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
 		5039885027F4E85600EA01CA /* EmailAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthView.swift; sourceTree = "<group>"; };
 		5039885227F502B200EA01CA /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		509F4A0127F6FB5F0078968E /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationView.swift; sourceTree = "<group>"; };
+		509F4A0727F7164B0078968E /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
+		509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		50FF5DE427EF36E2009F1E80 /* TourPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPortalApp.swift; sourceTree = "<group>"; };
 		50FF5DE927EF36E2009F1E80 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -158,6 +166,10 @@
 				5039884A27F46DF000EA01CA /* File.swift */,
 				5039884527F461A900EA01CA /* AuthView.swift */,
 				5039885027F4E85600EA01CA /* EmailAuthView.swift */,
+				509F4A0727F7164B0078968E /* SecureInputView.swift */,
+				509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */,
+				509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */,
+				509F4A0127F6FB5F0078968E /* EmailTextField.swift */,
 				5039884E27F484FB00EA01CA /* WideButtonView.swift */,
 			);
 			path = Profile;
@@ -265,9 +277,12 @@
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
 				5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */,
 				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
+				509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */,
+				509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */,
 				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,
 				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
+				509F4A0A27F72C3F0078968E /* PrivacyPolicyView.swift in Sources */,
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,
 				50FF5E0127F09D20009F1E80 /* SearchModuleView.swift in Sources */,
@@ -276,6 +291,7 @@
 				50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */,
 				5039885327F502B200EA01CA /* EmailValidation.swift in Sources */,
 				50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */,
+				509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */,
 				50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
 				50FF5E0D27F0EA3C009F1E80 /* ProfileView.swift in Sources */,

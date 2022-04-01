@@ -7,25 +7,22 @@
 
 import SwiftUI
 import PartialSheet
+
 struct EmailAuthView: View {
   @Binding var isPresented: Bool
   @Binding var isRootPresented: Bool
   @State private var isEmailAvailable = false
   @State private var email: String = ""
   @State private var password = ""
+  
+  private func auth() {
+    
+  }
+  
   var body: some View {
-    let test:Bool = !isEmailAvailable && password.count < 10
     NavigationView {
-      VStack {
-        TextField("email@example.com", text: $email)
-          .frame(maxWidth: .infinity)
-          .padding()
-          .background(Color(UIColor.systemGray6))
-          .cornerRadius(12)
-          .overlay(
-            RoundedRectangle(cornerRadius: 12)
-              .stroke(Color(UIColor.systemGray4), lineWidth: 1)
-          )
+      VStack(spacing: 12) {
+        EmailTextField("email@example.com", text: $email)
           .onChange(of: email) { newValue in
             if newValue.validateEmail() {
               withAnimation {
@@ -38,24 +35,26 @@ struct EmailAuthView: View {
             }
           }
         if isEmailAvailable {
-          TextField("Password", text: $password)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color(UIColor.systemGray6))
-            .cornerRadius(12)
-            .overlay(
-              RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(UIColor.systemGray4), lineWidth: 1)
-            )
+          SecureInputView(title: "Пароль", password: $password)
             .transition(.opacity)
+            .submitLabel(.send)
+            .onSubmit {
+              auth()
+            }
         }
         Button {
-          print(test)
+          auth()
         } label: {
-          Text("Войти")
+          WideButtonView(imageName: "", text: "Войти", backgroundColor: .blue, textColor: .white, style: .titleOnly)
         }
         .disabled(!(isEmailAvailable && !password.isEmpty))
-        
+        Spacer()
+        Divider()
+        NavigationLink(destination: {
+          EmailRegistrationView(email: $email, passoword: $password, isRootPresented: $isRootPresented)
+        }, label: {
+          WideButtonView(imageName: "", text: "Зарегистрироваться", backgroundColor: .green, textColor: .white, style: .titleOnly)
+        })
       }
       .padding()
       .navigationTitle("Авторизация")

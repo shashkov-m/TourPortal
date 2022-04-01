@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct WideButtonView: View {
+struct WideButtonView<S: LabelStyle>: View {
   var imageName: String
   var text: String
   var backgroundColor: Color
   var textColor: Color
+  var style: S
   
   var body: some View {
     Label {
@@ -26,11 +27,12 @@ struct WideButtonView: View {
     .padding()
     .background(backgroundColor)
     .cornerRadius(12)
+    .labelStyle(style)
   }
 }
 
 struct WideButtonView_Previews: PreviewProvider {
   static var previews: some View {
-    WideButtonView(imageName: "vk", text: "auth", backgroundColor: .blue, textColor: .white)
+    WideButtonView(imageName: "vk", text: "auth", backgroundColor: .blue, textColor: .white, style: .automatic)
   }
 }
