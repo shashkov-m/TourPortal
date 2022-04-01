@@ -28,7 +28,7 @@ struct NewsfeedView: View {
         }
         .gesture(tap)
       }
-      .navigationTitle("Новости")
+      .navigationTitle("Тур Блог")
     }
   }
 }
