@@ -11,6 +11,7 @@ import PartialSheet
 struct AuthView: View {
   @State private var isEmailTapped = false
   @Binding var isRootPresented: Bool
+  private let viewModel = ViewModel()
   var body: some View {
     VStack(spacing: 8) {
       Text("Вход в профиль")
@@ -22,7 +23,7 @@ struct AuthView: View {
         Button {
           isEmailTapped.toggle()
         } label: {
-          WideButtonView(imageName: "mail", text: "Email", backgroundColor: .blue, textColor: .white, style: .titleAndIcon)
+          WideButtonView(imageName: "at", text: "Email", backgroundColor: .blue, textColor: .white, style: .titleAndIcon)
         }
         .sheet(isPresented: $isEmailTapped) {
           EmailAuthView(isPresented: $isEmailTapped, isRootPresented: $isRootPresented)

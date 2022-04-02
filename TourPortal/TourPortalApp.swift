@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct TourPortalApp: App {
+  init() {
+    FirebaseApp.configure()
+  }
   var body: some Scene {
     WindowGroup {
       MainTabView()

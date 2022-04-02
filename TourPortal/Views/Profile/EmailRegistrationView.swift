@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmailRegistrationView: View {
+  private let authManager = AuthManager()
   @Binding var email: String
   @Binding var passoword: String
   @Binding var isRootPresented: Bool
@@ -20,7 +21,7 @@ struct EmailRegistrationView: View {
           SecureInputView(title: "Пароль", password: $passoword)
         }
         Button {
-          isSuccess.toggle()
+          authManager.signUp(email: email, password: passoword)
         } label: {
           WideButtonView(imageName: "", text: "Продолжить", backgroundColor: .green, textColor: .white, style: .titleOnly)
         }

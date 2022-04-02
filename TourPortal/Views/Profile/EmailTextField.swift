@@ -18,6 +18,8 @@ struct EmailTextField: View {
     TextField(placeholder, text: text)
       .textContentType(.username)
       .keyboardType(.emailAddress)
+      .disableAutocorrection(true)
+      .textInputAutocapitalization(.never)
       .frame(maxWidth: .infinity)
       .padding()
       .background(Color(UIColor.systemGray6))
