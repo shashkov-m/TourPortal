@@ -32,8 +32,16 @@ class AuthManager: ObservableObject {
     }
   }
   func signInPasswordless(email: String) {
-    auth.sendSignInLink(toEmail: email, actionCodeSettings: ActionCodeSettings) { <#Error?#> in
-      <#code#>
+    let actionCodeSettings = ActionCodeSettings()
+    actionCodeSettings.url = URL(string: "tourportaltravel.firebaseapp.com")
+    actionCodeSettings.handleCodeInApp = true
+    actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+    auth.sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { error in
+      if let error = error {
+        print(error)
+        return
+      }
+      UserDefaults.standard.set(email, forKey: "Email")
     }
   }
 }
