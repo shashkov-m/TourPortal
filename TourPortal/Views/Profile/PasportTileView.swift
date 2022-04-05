@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonView: View {
+struct PasportTileView: View {
   let name: String
     var body: some View {
       VStack(alignment: .leading) {
@@ -20,14 +20,15 @@ struct PersonView: View {
         Text(name)
       }
       .padding()
-      .foregroundColor(.white)
-      .background(.gray)
+      .background(Color(UIColor.secondarySystemBackground))
       .cornerRadius(12)
+      .lineLimit(1)
+      .frame(maxWidth: 150)
     }
 }
 
-struct PersonView_Previews: PreviewProvider {
+struct PasportTileView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonView(name: "Von H.")
+        PasportTileView(name: "Von H.")
     }
 }

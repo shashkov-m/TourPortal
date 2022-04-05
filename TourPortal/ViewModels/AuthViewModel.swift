@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AuthView {
+extension AuthMethodsView {
   class ViewModel {
     func someAction() {
       

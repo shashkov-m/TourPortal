@@ -1,5 +1,5 @@
 //
-//  AuthView.swift
+//  AuthMethodsView.swift
 //  TourPortal
 //
 //  Created by Max Shashkov on 30.03.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import PartialSheet
 
-struct AuthView: View {
+struct AuthMethodsView: View {
   @State private var isEmailTapped = false
   @Binding var isRootPresented: Bool
   private let viewModel = ViewModel()
@@ -46,7 +46,7 @@ struct AuthView: View {
 
 struct AuthVIew_Previews: PreviewProvider {
   static var previews: some View {
-    AuthView(isRootPresented: .constant(true))
+    AuthMethodsView(isRootPresented: .constant(true))
       .attachPartialSheetToRoot()
   }
 }

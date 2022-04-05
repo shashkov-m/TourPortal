@@ -19,7 +19,7 @@ struct LoggedInView: View {
           Text("Инфо")
         }
         Section {
-          PopularRoutesView()
+          PasportsView()
         } header: {
           Text("Документы")
         }
