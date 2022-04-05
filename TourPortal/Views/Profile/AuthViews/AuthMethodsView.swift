@@ -1,5 +1,5 @@
 //
-//  AuthView.swift
+//  AuthMethodsView.swift
 //  TourPortal
 //
 //  Created by Max Shashkov on 30.03.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import PartialSheet
 
-struct AuthView: View {
+struct AuthMethodsView: View {
   @State private var isEmailTapped = false
   @Binding var isRootPresented: Bool
   var body: some View {
@@ -22,26 +22,22 @@ struct AuthView: View {
         Button {
           isEmailTapped.toggle()
         } label: {
-          WideButtonView(imageName: "mail", text: "Email", backgroundColor: .blue, textColor: .white)
+          WideButtonView(imageName: "at", text: "Email", backgroundColor: .blue, textColor: .white, style: .titleAndIcon)
         }
         .sheet(isPresented: $isEmailTapped) {
           EmailAuthView(isPresented: $isEmailTapped, isRootPresented: $isRootPresented)
         }
         Button {
         } label: {
-          WideButtonView(imageName: "appleicon", text: "Продолжить с Apple", backgroundColor: Color(UIColor.lightGray), textColor: .white)
+          WideButtonView(imageName: "appleicon", text: "Продолжить с Apple", backgroundColor: Color(UIColor.lightGray), textColor: .white, style: .titleAndIcon)
         }
         Button {
         } label: {
-          WideButtonView(imageName: "google", text: "Google", backgroundColor: Color (UIColor.systemGroupedBackground), textColor: .gray)
+          WideButtonView(imageName: "google", text: "Google", backgroundColor: Color (UIColor.systemGroupedBackground), textColor: .gray, style: .titleAndIcon)
         }
       }
       Divider()
-      Text("Авторизуясь, вы соглашаетесь с\n Лицензионным соглашением и Политикой конфиденциальности")
-        .font(.caption2)
-        .foregroundColor(.secondary)
-        .multilineTextAlignment(.center)
-        .frame(maxWidth: .infinity)
+      PrivacyPolicyView()
     }
     .padding()
   }
@@ -49,7 +45,8 @@ struct AuthView: View {
 
 struct AuthVIew_Previews: PreviewProvider {
   static var previews: some View {
-    AuthView(isRootPresented: .constant(true))
+    AuthMethodsView(isRootPresented: .constant(true))
       .attachPartialSheetToRoot()
+      .environmentObject(AuthManager())
   }
 }

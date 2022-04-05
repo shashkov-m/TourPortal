@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct TourPortalApp: App {
+  @StateObject var authManager = AuthManager()
+  init() {
+    FirebaseApp.configure()
+  }
   var body: some Scene {
     WindowGroup {
       MainTabView()
+        .environmentObject(authManager)
     }
   }
 }
