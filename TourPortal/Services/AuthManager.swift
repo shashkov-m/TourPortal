@@ -7,17 +7,29 @@
 
 import Foundation
 import Firebase
+import SwiftUI
 
-class AuthManager: ObservableObject {
+@MainActor final class AuthManager: ObservableObject {
   let auth = Auth.auth()
-  @Published var user: User?
-  func signIn(email: String, password: String) {
+  @Published private(set) var isSignIn: Bool
+  init() {
+    self.isSignIn = auth.currentUser == nil ? false : true
+    print ("Email ", auth.currentUser?.email)
+    print ("is verify? " , auth.currentUser?.isEmailVerified)
+  }
+  func signIn(email: String, password: String, completion: @escaping (Error?) -> ()) {
     auth.signIn(withEmail: email, password: password) { [weak self] result, error in
       if let error = error {
+        completion(error)
         fatalError ("TODO")
       } else if let result = result {
+        completion(nil)
         guard let self = self else { return }
-        self.user = result.user
+        Task { @MainActor in
+          withAnimation {
+            self.isSignIn = true
+          }
+        }
       }
     }
   }
@@ -27,21 +39,39 @@ class AuthManager: ObservableObject {
         fatalError ("TODO")
       } else if let result = result {
         guard let self = self else { return }
-        self.user = result.user
+        self.sendEmailVerification(user: result.user)
+        withAnimation {
+          self.isSignIn = true
+        }
       }
     }
   }
   func signInPasswordless(email: String) {
+    //    auth.sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { error in
+    //    if let error = error {
+    //      print(error)
+    //      return
+    UserDefaults.standard.set(email, forKey: "Email")
+  }
+  func sendEmailVerification(user: User) {
+    guard let email = user.email else { return }
     let actionCodeSettings = ActionCodeSettings()
-    actionCodeSettings.url = URL(string: "tourportaltravel.firebaseapp.com")
+    let url = String(format: "https://tourportal.page.link/?email=%@", email)
+    actionCodeSettings.url = URL(string: url)
     actionCodeSettings.handleCodeInApp = true
     actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-    auth.sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { error in
-      if let error = error {
-        print(error)
-        return
+    user.sendEmailVerification(with: actionCodeSettings) { error in
+      print (error?.localizedDescription)
+    }
+  }
+  func signOut() {
+    do {
+      try auth.signOut()
+      withAnimation {
+        isSignIn = false
       }
-      UserDefaults.standard.set(email, forKey: "Email")
+    } catch {
+      print (error.localizedDescription)
     }
   }
 }

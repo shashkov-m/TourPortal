@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
-  var isUserAuth = true
+  @EnvironmentObject var authManager: AuthManager
   var body: some View {
-    if isUserAuth {
+    if authManager.isSignIn {
       LoggedInView()
     } else {
       AuthView()
+        .attachPartialSheetToRoot()
     }
   }
 }
@@ -21,5 +22,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
   static var previews: some View {
     ProfileView()
+      .environmentObject(AuthManager())
+      .attachPartialSheetToRoot()
   }
 }

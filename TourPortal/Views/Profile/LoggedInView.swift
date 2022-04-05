@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoggedInView: View {
+  @EnvironmentObject var authManager: AuthManager
   var body: some View {
     NavigationView {
       List {
@@ -31,7 +32,7 @@ struct LoggedInView: View {
         }
         Section {
           Button(action: {
-            
+            authManager.signOut()
           }, label: {
             Text("Выйти из профиля")
               .foregroundColor(.red)
@@ -47,5 +48,6 @@ struct LoggedInView: View {
 struct LoggedInView_Previews: PreviewProvider {
   static var previews: some View {
     LoggedInView()
+      .environmentObject(AuthManager())
   }
 }

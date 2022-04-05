@@ -11,7 +11,6 @@ import PartialSheet
 struct AuthMethodsView: View {
   @State private var isEmailTapped = false
   @Binding var isRootPresented: Bool
-  private let viewModel = ViewModel()
   var body: some View {
     VStack(spacing: 8) {
       Text("Вход в профиль")
@@ -48,5 +47,6 @@ struct AuthVIew_Previews: PreviewProvider {
   static var previews: some View {
     AuthMethodsView(isRootPresented: .constant(true))
       .attachPartialSheetToRoot()
+      .environmentObject(AuthManager())
   }
 }

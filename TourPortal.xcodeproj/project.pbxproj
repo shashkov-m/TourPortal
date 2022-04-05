@@ -21,6 +21,7 @@
 		500BF3F527FB456D00C19F39 /* Pasport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3F427FB456D00C19F39 /* Pasport.swift */; };
 		500BF3F727FB95C000C19F39 /* PasportsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3F627FB95C000C19F39 /* PasportsManager.swift */; };
 		500BF3F927FB9FCA00C19F39 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3F827FB9FCA00C19F39 /* ProfileView.swift */; };
+		500BF3FB27FC807500C19F39 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3FA27FC807500C19F39 /* SpinnerView.swift */; };
 		5039884627F461A900EA01CA /* AuthMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884527F461A900EA01CA /* AuthMethodsView.swift */; };
 		5039884927F46A3000EA01CA /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5039884827F46A3000EA01CA /* PartialSheet */; };
 		5039884B27F46DF000EA01CA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884A27F46DF000EA01CA /* File.swift */; };
@@ -63,6 +64,7 @@
 		500BF3F427FB456D00C19F39 /* Pasport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasport.swift; sourceTree = "<group>"; };
 		500BF3F627FB95C000C19F39 /* PasportsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasportsManager.swift; sourceTree = "<group>"; };
 		500BF3F827FB9FCA00C19F39 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		500BF3FA27FC807500C19F39 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		5039884527F461A900EA01CA /* AuthMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMethodsView.swift; sourceTree = "<group>"; };
 		5039884A27F46DF000EA01CA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		500BF3EF27FB0FE000C19F39 /* AuthViews */ = {
 			isa = PBXGroup;
 			children = (
+				50FF5E0C27F0EA3C009F1E80 /* AuthView.swift */,
 				5039884527F461A900EA01CA /* AuthMethodsView.swift */,
 				5039885027F4E85600EA01CA /* EmailAuthView.swift */,
 				509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */,
@@ -194,6 +197,7 @@
 				50FF5E0F27F0EB39009F1E80 /* NewsfeedViews */,
 				50FF5E0827F0E90D009F1E80 /* ChatViews */,
 				50FF5E0B27F0EA2D009F1E80 /* Profile */,
+				500BF3FA27FC807500C19F39 /* SpinnerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				500BF3EF27FB0FE000C19F39 /* AuthViews */,
-				50FF5E0C27F0EA3C009F1E80 /* AuthView.swift */,
 				500BF3F827FB9FCA00C19F39 /* ProfileView.swift */,
 				500BF3EB27FAFF6900C19F39 /* LoggedInView.swift */,
 				500BF3ED27FB0FCF00C19F39 /* PasportsView.swift */,
@@ -351,6 +354,7 @@
 				509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */,
 				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,
 				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
+				500BF3FB27FC807500C19F39 /* SpinnerView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
 				500BF3F127FB1FE700C19F39 /* PasportTileView.swift in Sources */,
 				500BF3F927FB9FCA00C19F39 /* ProfileView.swift in Sources */,

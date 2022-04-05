@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct EmailRegistrationView: View {
-  private let authManager = AuthManager()
+  @EnvironmentObject var authManager: AuthManager
   @Binding var email: String
   @Binding var passoword: String
   @Binding var isRootPresented: Bool
   @State private var isSuccess = false
   var body: some View {
-    NavigationView {
       VStack(spacing: 18) {
         VStack {
           EmailTextField("Email адрес", text: $email)
@@ -31,18 +30,17 @@ struct EmailRegistrationView: View {
       .padding()
       .navigationTitle("Регистрация")
       .navigationBarTitleDisplayMode(.inline)
-      .navigationBarBackButtonHidden(false)
       .alert("Message", isPresented: $isSuccess) {
         Button("OK", role: .cancel) {
           isRootPresented.toggle()
         }
       }
-    }
   }
 }
 
 struct EmailRegistrationView_Previews: PreviewProvider {
   static var previews: some View {
     EmailRegistrationView(email: .constant(""), passoword: .constant(""), isRootPresented: .constant(true))
+      .environmentObject(AuthManager())
   }
 }
