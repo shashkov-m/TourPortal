@@ -14,13 +14,13 @@ struct PasportTileView: View {
         Label(title: {
           Text("Паспорт")
         }, icon: {
-          Image(systemName: "person.crop.square")
+          Image(systemName: "person.fill")
         })
         .labelStyle(TextIconLabelStyle())
         Text(name)
       }
       .padding()
-      .background(Color(UIColor.secondarySystemBackground))
+      .background(.quaternary)//Color(UIColor.secondarySystemBackground))
       .cornerRadius(12)
       .lineLimit(1)
       .frame(maxWidth: 150)
@@ -29,6 +29,8 @@ struct PasportTileView: View {
 
 struct PasportTileView_Previews: PreviewProvider {
     static var previews: some View {
-        PasportTileView(name: "Von H.")
+      PasportTileView(name: "Von H.")
+        .preferredColorScheme(.light)
+        .environmentObject(AuthManager())
     }
 }

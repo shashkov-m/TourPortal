@@ -23,7 +23,7 @@ struct MainTabView: View {
           .tabItem {
             Label("Контакты", systemImage: "phone.fill")
           }
-        ProfileView()
+        ProfileViewWrapper()
           .tabItem {
             Label("Профиль", systemImage: "person.fill")
           }

@@ -17,5 +17,6 @@ struct PasportDetailView: View {
 struct PasportDetailView_Previews: PreviewProvider {
     static var previews: some View {
       PasportDetailView(pasport: .constant(Pasport (userId: "", pasportId: 1815144546, name: "Max", surname: "Shashkov", patronymic: nil, sex: .male, authority: "OUFMS Rf blablabla", citizenship: "Russia", birthDate: "23.08.1995", dateOfIssue: "12.09.2020", expirationDate: "13.09.2030", noExpirationDate: false, noPatronymic: true)))
+        .environmentObject(AuthManager())
     }
 }

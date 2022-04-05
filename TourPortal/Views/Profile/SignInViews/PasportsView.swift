@@ -13,15 +13,6 @@ struct PasportsView: View {
   @State private var isShowModal: Bool = false
   var body: some View {
     VStack {
-      HStack {
-        Spacer()
-        Button {
-          
-        } label: {
-          Image(systemName: "plus")
-            .font(.title2)
-        }
-      }
       ScrollView(.horizontal, showsIndicators: false) {
         HStack {
           ForEach(pasportManager.pasports, id: \.id) { pasport in
@@ -31,6 +22,16 @@ struct PasportsView: View {
                 isShowModal.toggle()
               }
           }
+        }
+      }
+      HStack {
+        Spacer()
+        Button {
+          
+        } label: {
+          Text("Добавить")
+//          Image(systemName: "plus")
+//            .font(.title2)
         }
       }
     }
@@ -43,5 +44,6 @@ struct PasportsView: View {
 struct PasportsView_Previews: PreviewProvider {
   static var previews: some View {
     PasportsView()
+      .environmentObject(AuthManager())
   }
 }

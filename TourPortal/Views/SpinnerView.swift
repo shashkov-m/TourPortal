@@ -11,8 +11,11 @@ struct SpinnerView: View {
     var body: some View {
         ProgressView()
         .progressViewStyle(.circular)
+        .scaleEffect(1.2)
+        .tint(.white)
         .padding()
-        .background(Color(UIColor.systemGray4))
+        .background(.gray)
+        .cornerRadius(8)
     }
 }
 

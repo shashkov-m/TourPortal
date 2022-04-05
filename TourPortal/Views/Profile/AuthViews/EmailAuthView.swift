@@ -16,6 +16,8 @@ struct EmailAuthView: View {
   @State private var email: String = ""
   @State private var password = ""
   @State private var isSpinnerPresented = false
+  @State private var isAlertPresented = false
+  @State private var errorMessage = ""
   var body: some View {
     NavigationView {
       ZStack(alignment: .center) {
@@ -42,6 +44,8 @@ struct EmailAuthView: View {
             }
             authManager.signIn(email: email, password: password) { error in
               if let error = error {
+                errorMessage = error.localizedDescription
+                isAlertPresented.toggle()
                 withAnimation {
                   isSpinnerPresented = false
                 }
@@ -60,7 +64,7 @@ struct EmailAuthView: View {
           Spacer()
           Divider()
           NavigationLink(destination: {
-            EmailRegistrationView(email: $email, passoword: $password, isRootPresented: $isRootPresented)
+            EmailRegistrationView(email: $email, passoword: $password, isModalPresented: $isPresented)
           }, label: {
             WideButtonView(imageName: "", text: "Зарегистрироваться", backgroundColor: .green, textColor: .white, style: .titleOnly)
           })
@@ -73,6 +77,11 @@ struct EmailAuthView: View {
       .navigationTitle("Авторизация")
       .navigationViewStyle(.stack)
       .navigationBarTitleDisplayMode(.inline)
+      .alert("Ошибка", isPresented: $isAlertPresented) {
+        Button("OK", role: .cancel) { }
+      } message: {
+        Text(errorMessage)
+      }
       .toolbar {
         Button {
           isPresented.toggle()

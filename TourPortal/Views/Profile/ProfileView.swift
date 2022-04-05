@@ -11,7 +11,7 @@ struct ProfileView: View {
   @EnvironmentObject var authManager: AuthManager
   var body: some View {
     if authManager.isSignIn {
-      LoggedInView()
+      SignInView()
     } else {
       AuthView()
         .attachPartialSheetToRoot()
