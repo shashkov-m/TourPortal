@@ -44,7 +44,8 @@ import SwiftUI
         withAnimation {
           self.isSignIn = true
         }
-        self.sendEmailVerification(user: result.user)
+        result.user.sendEmailVerification(beforeUpdatingEmail: email)
+        //self.sendEmailVerification(user: result.user)
       }
     }
   }
