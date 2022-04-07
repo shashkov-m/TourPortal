@@ -44,21 +44,8 @@ import SwiftUI
         withAnimation {
           self.isSignIn = true
         }
-        result.user.sendEmailVerification(beforeUpdatingEmail: email)
-        //self.sendEmailVerification(user: result.user)
+        result.user.sendEmailVerification()
       }
-    }
-  }
-
-  func sendEmailVerification(user: User) {
-    queue.async {
-      guard let email = user.email else { return }
-      let actionCodeSettings = ActionCodeSettings()
-      let url = String(format: "https://tourportal.page.link/?email=%@", email)
-      actionCodeSettings.url = URL(string: url)
-      actionCodeSettings.handleCodeInApp = true
-      actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-      user.sendEmailVerification(with: actionCodeSettings)
     }
   }
   

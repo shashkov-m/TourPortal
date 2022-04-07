@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WideButtonView<S: LabelStyle>: View {
   var imageName: String
-  var text: String
+  var text: LocalizedStringKey
   var backgroundColor: Color
   var textColor: Color
   var style: S

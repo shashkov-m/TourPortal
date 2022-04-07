@@ -9,10 +9,9 @@ import SwiftUI
 
 struct EmailTextField: View {
   var text: Binding<String>
-  var placeholder: String
-  init(_ placeholder: String, text: Binding<String>) {
+  var placeholder: LocalizedStringKey = "Email placeholder"
+  init(_ text: Binding<String>) {
     self.text = text
-    self.placeholder = placeholder
   }
   var body: some View {
     TextField(placeholder, text: text)
@@ -33,6 +32,6 @@ struct EmailTextField: View {
 
 struct AuthTextField_Previews: PreviewProvider {
   static var previews: some View {
-    EmailTextField("example@email.com", text: .constant(""))
+    EmailTextField(.constant(""))
   }
 }

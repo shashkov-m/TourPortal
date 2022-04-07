@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PrivacyPolicyView: View {
+  let privacyPolicyKey: LocalizedStringKey = "Privacy policy"
     var body: some View {
-      Text("Авторизуясь, вы соглашаетесь с\n Лицензионным соглашением и Политикой конфиденциальности")
+      Text(privacyPolicyKey)
         .font(.caption2)
         .foregroundColor(.secondary)
         .multilineTextAlignment(.center)

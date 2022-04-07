@@ -9,16 +9,16 @@ import SwiftUI
 
 struct SecureInputView: View {
   @State private var isSecured = true
-  var title: String
   @Binding var password: String
+  private let placeholder: LocalizedStringKey = "Password placeholder"
   
   var body: some View {
     ZStack(alignment: .trailing) {
       Group {
         if isSecured {
-          SecureField(title, text: $password)
+          SecureField(placeholder, text: $password)
         } else {
-          TextField(title, text: $password)
+          TextField(placeholder, text: $password)
         }
       }.padding(.trailing, 32)
       Button(action: {
@@ -42,6 +42,6 @@ struct SecureInputView: View {
 
 struct SecureInputView_Previews: PreviewProvider {
   static var previews: some View {
-    SecureInputView(title: "password", password: .constant(""))
+    SecureInputView(password: .constant(""))
   }
 }

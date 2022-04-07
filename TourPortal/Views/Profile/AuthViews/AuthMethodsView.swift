@@ -13,11 +13,7 @@ struct AuthMethodsView: View {
   @Binding var isRootPresented: Bool
   var body: some View {
     VStack(spacing: 8) {
-      Text("Вход в профиль")
-        .font(.title.bold())
-      Text("Создавайте подписки на изменения цен, сохраняйте паспорта для будущих покупок.")
-        .font(.body)
-        .foregroundColor(.secondary)
+      AuthTextView(headerText: "Sign in", bodyText: "Sign in promo 2")
       Group {
         Button {
           isEmailTapped.toggle()

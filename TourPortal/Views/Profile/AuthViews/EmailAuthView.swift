@@ -10,39 +10,34 @@ import PartialSheet
 
 struct EmailAuthView: View {
   @EnvironmentObject var authManager: AuthManager
-  @Binding var isPresented: Bool
-  @Binding var isRootPresented: Bool
-  @State private var isEmailAvailable = false
-  @State private var email: String = ""
-  @State private var password = ""
+  @State private var credentials = Credentials()
   @State private var isSpinnerPresented = false
   @State private var isAlertPresented = false
   @State private var errorMessage = ""
+  @State private var isEmailAvailable = false
+  @Binding var isPresented: Bool
+  @Binding var isRootPresented: Bool
   var body: some View {
     NavigationView {
       ZStack(alignment: .center) {
         VStack(spacing: 12) {
-          EmailTextField("email@example.com", text: $email)
-            .onChange(of: email) { newValue in
+          EmailTextField($credentials.email)
+            .onChange(of: credentials.email) { newValue in
               if newValue.validateEmail() {
-                withAnimation {
-                  isEmailAvailable = true
-                }
+                withAnimation { isEmailAvailable = true }
               } else if !newValue.validateEmail() && isEmailAvailable {
-                withAnimation {
-                  isEmailAvailable = false
-                }
+                withAnimation { isEmailAvailable = false }
               }
             }
           if isEmailAvailable {
-            SecureInputView(title: "Пароль", password: $password)
+            SecureInputView(password: $credentials.password)
               .transition(.opacity)
           }
           Button {
             withAnimation {
               isSpinnerPresented = true
             }
-            authManager.signIn(email: email, password: password) { error in
+            authManager.signIn(email: credentials.email, password: credentials.password) { error in
               if let error = error {
                 errorMessage = error.localizedDescription
                 isAlertPresented.toggle()
@@ -58,15 +53,15 @@ struct EmailAuthView: View {
               }
             }
           } label: {
-            WideButtonView(imageName: "", text: "Войти", backgroundColor: .blue, textColor: .white, style: .titleOnly)
+            WideButtonView(imageName: "", text: "Sign in button", backgroundColor: .blue, textColor: .white, style: .titleOnly)
           }
-          .disabled(!(isEmailAvailable && !password.isEmpty))
+          .disabled(!(isEmailAvailable && !credentials.password.isEmpty))
           Spacer()
           Divider()
           NavigationLink(destination: {
-            EmailRegistrationView(email: $email, passoword: $password, isModalPresented: $isPresented)
+            EmailRegistrationView(email: $credentials.email, passoword: $credentials.password, isModalPresented: $isPresented)
           }, label: {
-            WideButtonView(imageName: "", text: "Зарегистрироваться", backgroundColor: .green, textColor: .white, style: .titleOnly)
+            WideButtonView(imageName: "", text: "Sign up button", backgroundColor: .green, textColor: .white, style: .titleOnly)
           })
         }
         if isSpinnerPresented {
@@ -74,10 +69,10 @@ struct EmailAuthView: View {
         }
       }
       .padding()
-      .navigationTitle("Авторизация")
+      .navigationTitle("Auth")
       .navigationViewStyle(.stack)
       .navigationBarTitleDisplayMode(.inline)
-      .alert("Ошибка", isPresented: $isAlertPresented) {
+      .alert("Error", isPresented: $isAlertPresented) {
         Button("OK", role: .cancel) { }
       } message: {
         Text(errorMessage)
