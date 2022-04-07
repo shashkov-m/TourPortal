@@ -16,39 +16,44 @@ struct EmailRegistrationView: View {
   @State private var isSpinnerPresented = false
   @State private var errorMessage = ""
   var body: some View {
-    VStack(spacing: 18) {
-      VStack {
-        EmailTextField($email)
-        SecureInputView(password: $passoword)
-      }
-      Button {
-        withAnimation {
-          isSpinnerPresented = true
+    ZStack {
+      VStack(spacing: 18) {
+        VStack {
+          EmailTextField($email)
+          SecureInputView(password: $passoword)
         }
-        authManager.signUp(email: email, password: passoword) { error in
-          if let error = error {
-            errorMessage = error.localizedDescription
-            withAnimation {
-              isSpinnerPresented = false
-              isError.toggle()
-            }
-          } else {
-            withAnimation {
-              isSpinnerPresented = false
-              isModalPresented.toggle()
+        Button {
+          withAnimation {
+            isSpinnerPresented = true
+          }
+          authManager.signUp(email: email, password: passoword) { error in
+            if let error = error {
+              errorMessage = error.localizedDescription
+              withAnimation {
+                isSpinnerPresented = false
+                isError.toggle()
+              }
+            } else {
+              withAnimation {
+                isSpinnerPresented = false
+                isModalPresented.toggle()
+              }
             }
           }
+        } label: {
+          WideButtonView(imageName: "", text: "Sign up button", backgroundColor: .green, textColor: .white, style: .titleOnly)
         }
-      } label: {
-        WideButtonView(imageName: "", text: "Продолжить", backgroundColor: .green, textColor: .white, style: .titleOnly)
+        Spacer()
+        Divider()
       }
-      Spacer()
-      Divider()
+      if isSpinnerPresented {
+        SpinnerView()
+      }
     }
     .padding()
-    .navigationTitle("Регистрация")
+    .navigationTitle("Sign up nav title")
     .navigationBarTitleDisplayMode(.inline)
-    .alert("Ошибка", isPresented: $isError) {
+    .alert("Error", isPresented: $isError) {
       Button("OK", role: .cancel) { }
     } message: {
       Text(errorMessage)

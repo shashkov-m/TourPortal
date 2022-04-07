@@ -69,7 +69,7 @@ struct EmailAuthView: View {
         }
       }
       .padding()
-      .navigationTitle("Auth")
+      .navigationTitle("Sign in nav title")
       .navigationViewStyle(.stack)
       .navigationBarTitleDisplayMode(.inline)
       .alert("Error", isPresented: $isAlertPresented) {
