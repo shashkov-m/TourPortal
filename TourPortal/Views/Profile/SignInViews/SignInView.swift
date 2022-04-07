@@ -12,15 +12,19 @@ struct SignInView: View {
   var body: some View {
     NavigationView {
       VStack(alignment: .leading, spacing: 6) {
-        VStack(alignment: .leading, spacing: 6){
-          Text(authManager.auth.currentUser?.email ?? "email@example.com")
-            .font(.title)
-            .foregroundColor(.secondary)
-          Text("Не подтвержден")
-            .font(.headline)
-            .foregroundColor(.red)
+        if let user = authManager.auth.currentUser,
+           let email = user.email,
+           user.isEmailVerified == false {
+          VStack(alignment: .leading, spacing: 6){
+            Text(email)
+              .font(.title)
+              .foregroundColor(.secondary)
+            Text("Не подтвержден")
+              .font(.headline)
+              .foregroundColor(.red)
+          }
+          .padding()
         }
-        .padding()
         List {
           Section {
             Text("Заказы")
@@ -42,6 +46,7 @@ struct SignInView: View {
           }
           Section {
             Button(action: {
+              print (authManager.auth.currentUser?.isEmailVerified)
               authManager.signOut()
             }, label: {
               Text("Выйти из профиля")

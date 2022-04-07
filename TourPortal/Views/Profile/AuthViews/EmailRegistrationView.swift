@@ -18,8 +18,8 @@ struct EmailRegistrationView: View {
   var body: some View {
     VStack(spacing: 18) {
       VStack {
-        EmailTextField("Email адрес", text: $email)
-        SecureInputView(title: "Пароль", password: $passoword)
+        EmailTextField($email)
+        SecureInputView(password: $passoword)
       }
       Button {
         withAnimation {

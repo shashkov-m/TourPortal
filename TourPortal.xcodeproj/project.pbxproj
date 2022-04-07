@@ -24,6 +24,7 @@
 		500BF3FB27FC807500C19F39 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3FA27FC807500C19F39 /* SpinnerView.swift */; };
 		500BF3FD27FC955B00C19F39 /* ProfileViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF3FC27FC955B00C19F39 /* ProfileViewWrapper.swift */; };
 		500BF40227FCB5CF00C19F39 /* EmailAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BF40127FCB5CF00C19F39 /* EmailAuthViewModel.swift */; };
+		501ECAFF27FED29A006F2FE6 /* AuthTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501ECAFE27FED29A006F2FE6 /* AuthTextView.swift */; };
 		5039884627F461A900EA01CA /* AuthMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884527F461A900EA01CA /* AuthMethodsView.swift */; };
 		5039884927F46A3000EA01CA /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5039884827F46A3000EA01CA /* PartialSheet */; };
 		5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884E27F484FB00EA01CA /* WideButtonView.swift */; };
@@ -33,6 +34,8 @@
 		509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */; };
 		509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0727F7164B0078968E /* SecureInputView.swift */; };
 		509F4A0A27F72C3F0078968E /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */; };
+		50AA9FEC27FF06700009F77B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50AA9FEE27FF06700009F77B /* Localizable.strings */; };
+		50AA9FF227FF18420009F77B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA9FF127FF18420009F77B /* Credentials.swift */; };
 		50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */; };
 		50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5DE927EF36E2009F1E80 /* MainTabView.swift */; };
 		50FF5DEC27EF36E4009F1E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FF5DEB27EF36E4009F1E80 /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		500BF3FA27FC807500C19F39 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		500BF3FC27FC955B00C19F39 /* ProfileViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewWrapper.swift; sourceTree = "<group>"; };
 		500BF40127FCB5CF00C19F39 /* EmailAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthViewModel.swift; sourceTree = "<group>"; };
+		501ECAFC27FDD38B006F2FE6 /* TourPortal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TourPortal.entitlements; sourceTree = "<group>"; };
+		501ECAFD27FDD44C006F2FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		501ECAFE27FED29A006F2FE6 /* AuthTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextView.swift; sourceTree = "<group>"; };
 		5039884527F461A900EA01CA /* AuthMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMethodsView.swift; sourceTree = "<group>"; };
 		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
 		5039885027F4E85600EA01CA /* EmailAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,8 @@
 		509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationView.swift; sourceTree = "<group>"; };
 		509F4A0727F7164B0078968E /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
 		509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		50AA9FED27FF06700009F77B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50AA9FF127FF18420009F77B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		50FF5DE427EF36E2009F1E80 /* TourPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPortalApp.swift; sourceTree = "<group>"; };
 		50FF5DE927EF36E2009F1E80 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				500BF3F427FB456D00C19F39 /* Pasport.swift */,
+				50AA9FF127FF18420009F77B /* Credentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,11 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				50FF5E0C27F0EA3C009F1E80 /* AuthView.swift */,
+				501ECAFE27FED29A006F2FE6 /* AuthTextView.swift */,
 				5039884527F461A900EA01CA /* AuthMethodsView.swift */,
 				5039885027F4E85600EA01CA /* EmailAuthView.swift */,
 				509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */,
 				509F4A0127F6FB5F0078968E /* EmailTextField.swift */,
 				509F4A0727F7164B0078968E /* SecureInputView.swift */,
+				509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */,
 			);
 			path = AuthViews;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 		50FF5DE627EF36E2009F1E80 /* TourPortal */ = {
 			isa = PBXGroup;
 			children = (
+				501ECAFD27FDD44C006F2FE6 /* Info.plist */,
+				501ECAFC27FDD38B006F2FE6 /* TourPortal.entitlements */,
 				50FF5DE727EF36E2009F1E80 /* TourPortalApp.swift */,
 				500BF3D927F762F200C19F39 /* GoogleService-Info.plist */,
 				500BF3E527F768D000C19F39 /* ViewModels */,
@@ -191,6 +204,7 @@
 				500BF3E827F7859200C19F39 /* Styles */,
 				50FF5DEB27EF36E4009F1E80 /* Assets.xcassets */,
 				50FF5DED27EF36E4009F1E80 /* Preview Content */,
+				50AA9FEE27FF06700009F77B /* Localizable.strings */,
 			);
 			path = TourPortal;
 			sourceTree = "<group>";
@@ -244,7 +258,6 @@
 			children = (
 				500BF3FC27FC955B00C19F39 /* ProfileViewWrapper.swift */,
 				500BF3F827FB9FCA00C19F39 /* ProfileView.swift */,
-				509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */,
 				500BF40027FCAA1200C19F39 /* SignInViews */,
 				500BF3EF27FB0FE000C19F39 /* AuthViews */,
 			);
@@ -317,11 +330,10 @@
 			};
 			buildConfigurationList = 50FF5DDF27EF36E2009F1E80 /* Build configuration list for PBXProject "TourPortal" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				ru,
 			);
 			mainGroup = 50FF5DDB27EF36E2009F1E80;
 			packageReferences = (
@@ -343,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FF5DEF27EF36E4009F1E80 /* Preview Assets.xcassets in Resources */,
+				50AA9FEC27FF06700009F77B /* Localizable.strings in Resources */,
 				50FF5DEC27EF36E4009F1E80 /* Assets.xcassets in Resources */,
 				500BF3DA27F762F200C19F39 /* GoogleService-Info.plist in Resources */,
 			);
@@ -382,8 +395,10 @@
 				50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */,
 				500BF40227FCB5CF00C19F39 /* EmailAuthViewModel.swift in Sources */,
 				509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */,
+				501ECAFF27FED29A006F2FE6 /* AuthTextView.swift in Sources */,
 				500BF3EE27FB0FCF00C19F39 /* PasportsView.swift in Sources */,
 				50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */,
+				50AA9FF227FF18420009F77B /* Credentials.swift in Sources */,
 				500BF3EC27FAFF6900C19F39 /* SignInView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
 				50FF5E0D27F0EA3C009F1E80 /* AuthView.swift in Sources */,
@@ -397,11 +412,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		50AA9FEE27FF06700009F77B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AA9FED27FF06700009F77B /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		50FF5DF027EF36E4009F1E80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -462,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -517,12 +545,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TourPortal/TourPortal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"TourPortal/Preview Content\"";
 				DEVELOPMENT_TEAM = 6J7BMHDBAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TourPortal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -547,12 +577,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TourPortal/TourPortal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"TourPortal/Preview Content\"";
 				DEVELOPMENT_TEAM = 6J7BMHDBAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TourPortal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
