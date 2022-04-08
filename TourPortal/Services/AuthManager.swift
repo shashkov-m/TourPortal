@@ -18,10 +18,6 @@ import CryptoKit
   var authErrorMessage = ""
   private var currentNonce: String?
   
-  //  init() {
-  //    self.isSignIn = auth.currentUser == nil ? false : true
-  //  }
-  
   override init() {
     super.init()
     Task { @MainActor in
@@ -60,17 +56,6 @@ import CryptoKit
     }
   }
   
-  func signInWithApple() {
-    let nonce = randomNonceString()
-    currentNonce = nonce
-    let request = ASAuthorizationAppleIDProvider().createRequest()
-    request.requestedScopes = [.fullName, .email]
-    request.nonce = sha256(nonce)
-    let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-    authorizationController.delegate = self
-    authorizationController.performRequests()
-  }
-  
   func signOut() {
     do {
       try auth.signOut()
@@ -81,10 +66,24 @@ import CryptoKit
       print (error.localizedDescription)
     }
   }
+}
+
+//MARK: - Sign in with Apple
+extension AuthManager: ASAuthorizationControllerDelegate {
+  func signInWithApple() {
+    let nonce = randomNonceString()
+    currentNonce = nonce
+    let request = ASAuthorizationAppleIDProvider().createRequest()
+    request.requestedScopes = [.fullName, .email]
+    request.nonce = sha256(nonce)
+    let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+    authorizationController.delegate = self
+    authorizationController.performRequests()
+  }
   private func randomNonceString(length: Int = 32) -> String {
     precondition(length > 0)
     let charset: [Character] =
-      Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+    Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
     var result = ""
     var remainingLength = length
     while remainingLength > 0 {
@@ -110,7 +109,6 @@ import CryptoKit
     }
     return result
   }
-  @available(iOS 13, *)
   private func sha256(_ input: String) -> String {
     let inputData = Data(input.utf8)
     let hashedData = SHA256.hash(data: inputData)
@@ -119,9 +117,6 @@ import CryptoKit
     }.joined()
     return hashString
   }
-}
-
-extension AuthManager: ASAuthorizationControllerDelegate {
   
   func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
     if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
