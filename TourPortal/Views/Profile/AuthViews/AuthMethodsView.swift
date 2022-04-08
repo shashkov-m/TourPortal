@@ -31,10 +31,6 @@ struct AuthMethodsView: View {
           .onTapGesture {
             authManager.signInWithApple()
           }
-        Button {
-        } label: {
-          WideButtonView(imageName: "google", text: "Google", backgroundColor: Color (UIColor.systemGroupedBackground), textColor: .gray, style: .titleAndIcon)
-        }
       }
       Divider()
       PrivacyPolicyView()

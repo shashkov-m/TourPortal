@@ -23,8 +23,7 @@ struct WideButtonView<S: LabelStyle>: View {
         .resizable()
         .frame(width: 24, height: 24)
     }
-    .frame(maxWidth: .infinity)
-    .padding()
+    .frame(maxWidth: .infinity, maxHeight: 60)
     .background(backgroundColor)
     .cornerRadius(12)
     .labelStyle(style)
