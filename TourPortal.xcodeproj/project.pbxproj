@@ -30,6 +30,7 @@
 		5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884E27F484FB00EA01CA /* WideButtonView.swift */; };
 		5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885027F4E85600EA01CA /* EmailAuthView.swift */; };
 		5039885327F502B200EA01CA /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885227F502B200EA01CA /* EmailValidation.swift */; };
+		5050981F2800458100E4CFD9 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */; };
 		509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0127F6FB5F0078968E /* EmailTextField.swift */; };
 		509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */; };
 		509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0727F7164B0078968E /* SecureInputView.swift */; };
@@ -78,6 +79,7 @@
 		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
 		5039885027F4E85600EA01CA /* EmailAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthView.swift; sourceTree = "<group>"; };
 		5039885227F502B200EA01CA /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		509F4A0127F6FB5F0078968E /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationView.swift; sourceTree = "<group>"; };
 		509F4A0727F7164B0078968E /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				509F4A0127F6FB5F0078968E /* EmailTextField.swift */,
 				509F4A0727F7164B0078968E /* SecureInputView.swift */,
 				509F4A0927F72C3F0078968E /* PrivacyPolicyView.swift */,
+				5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */,
 			);
 			path = AuthViews;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				501ECAFF27FED29A006F2FE6 /* AuthTextView.swift in Sources */,
 				500BF3EE27FB0FCF00C19F39 /* PasportsView.swift in Sources */,
 				50FF5E1727F331F8009F1E80 /* OfficeInfoView.swift in Sources */,
+				5050981F2800458100E4CFD9 /* SignInWithAppleButton.swift in Sources */,
 				50AA9FF227FF18420009F77B /* Credentials.swift in Sources */,
 				500BF3EC27FAFF6900C19F39 /* SignInView.swift in Sources */,
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
