@@ -9,6 +9,7 @@ import SwiftUI
 import PartialSheet
 
 struct AuthView: View {
+  @EnvironmentObject var authManager: AuthManager
   @State private var isModalPresented = false
   var body: some View {
     VStack(spacing: 6) {
@@ -23,9 +24,15 @@ struct AuthView: View {
       Divider()
       Spacer()
     }
+    .alert("Error", isPresented: $authManager.isAuthError) {
+      Button("OK", role: .cancel) { }
+    } message: {
+      Text(authManager.authErrorMessage)
+    }
     .attachPartialSheetToRoot()
     .partialSheet(isPresented: $isModalPresented) {
       AuthMethodsView(isRootPresented: $isModalPresented)
+      
     }
   }
 }

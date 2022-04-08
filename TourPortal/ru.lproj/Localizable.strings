@@ -21,4 +21,5 @@
 "Email placeholder" = "Email адрес";
 "Password placeholder" = "Пароль";
 //MARK: - Navigation Titles
-"Auth" = "Авторизация";
+"Sign in nav title" = "Авторизация";
+"Sign up nav title" = "Регистрация";

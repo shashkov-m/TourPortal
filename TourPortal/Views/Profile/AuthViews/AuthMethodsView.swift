@@ -9,6 +9,7 @@ import SwiftUI
 import PartialSheet
 
 struct AuthMethodsView: View {
+  @EnvironmentObject var authManager: AuthManager
   @State private var isEmailTapped = false
   @Binding var isRootPresented: Bool
   var body: some View {
@@ -19,18 +20,17 @@ struct AuthMethodsView: View {
           isEmailTapped.toggle()
         } label: {
           WideButtonView(imageName: "at", text: "Email", backgroundColor: .blue, textColor: .white, style: .titleAndIcon)
+            .font(.title2)
         }
         .sheet(isPresented: $isEmailTapped) {
           EmailAuthView(isPresented: $isEmailTapped, isRootPresented: $isRootPresented)
         }
-        Button {
-        } label: {
-          WideButtonView(imageName: "appleicon", text: "Продолжить с Apple", backgroundColor: Color(UIColor.lightGray), textColor: .white, style: .titleAndIcon)
-        }
-        Button {
-        } label: {
-          WideButtonView(imageName: "google", text: "Google", backgroundColor: Color (UIColor.systemGroupedBackground), textColor: .gray, style: .titleAndIcon)
-        }
+        SignInWithAppleButton()
+          .frame(maxWidth: .infinity, maxHeight: 60)
+          .cornerRadius(12)
+          .onTapGesture {
+            authManager.signInWithApple()
+          }
       }
       Divider()
       PrivacyPolicyView()
