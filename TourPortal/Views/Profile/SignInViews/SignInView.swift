@@ -13,15 +13,11 @@ struct SignInView: View {
     NavigationView {
       VStack(alignment: .leading, spacing: 6) {
         if let user = authManager.auth.currentUser,
-           let email = user.email,
-           user.isEmailVerified == false {
+           let email = user.email {
           VStack(alignment: .leading, spacing: 6){
             Text(email)
               .font(.title)
               .foregroundColor(.secondary)
-            Text("Не подтвержден")
-              .font(.headline)
-              .foregroundColor(.red)
           }
           .padding()
         }

@@ -9,16 +9,20 @@ import SwiftUI
 
 struct MainView: View {
   var body: some View {
-    ScrollView(.vertical, showsIndicators: false) {
-      VStack {
-        LogoView(text: "Поиск выгодных\nтуров")
-        SearchModuleView()
-        PopularRoutesView()
-        AvailableRoutesView()
+    NavigationView {
+      ScrollView(.vertical, showsIndicators: false) {
+        VStack {
+          LogoView(text: "Поиск выгодных\nтуров")
+          SearchModuleView()
+            .padding(.top)
+          PopularRoutesView()
+          AvailableRoutesView()
+        }
       }
+      .padding()
+      .background(Color (UIColor.systemGroupedBackground))
+      .navigationBarHidden(true)
     }
-    .padding()
-    .background(Color (UIColor.systemGroupedBackground))
   }
 }
 struct MainView_Previews: PreviewProvider {

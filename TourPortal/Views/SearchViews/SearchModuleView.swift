@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchModuleView: View {
+  private var viewModel = ViewModel()
   var body: some View {
     VStack (spacing: 12) {
       VStack {
@@ -38,16 +39,13 @@ struct SearchModuleView: View {
         .background(Color (UIColor.secondarySystemGroupedBackground))
         .cornerRadius(16)
       }
-      Button("Найти туры") {
-        fatalError ("TODO")
+      NavigationLink {
+        SearchView(resultArray: viewModel.searchResultExample)
+      } label: {
+        WideButtonView(imageName: "", text: "Найти туры", backgroundColor: .yellow, textColor: .black, style: .titleOnly)
       }
-      .padding([.leading, .trailing], 100)
-      .padding()
-      .font(.headline)
-      .foregroundColor(.black)
-      .background(Color.yellow)
-      .cornerRadius(12)
     }
+    .frame(maxWidth: .infinity, maxHeight: 250)
   }
 }
 struct SearchModule_Previews: PreviewProvider {
