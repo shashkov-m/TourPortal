@@ -31,6 +31,13 @@
 		5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885027F4E85600EA01CA /* EmailAuthView.swift */; };
 		5039885327F502B200EA01CA /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885227F502B200EA01CA /* EmailValidation.swift */; };
 		5050981F2800458100E4CFD9 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */; };
+		5050987A280B368600E4CFD9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509879280B368600E4CFD9 /* SearchView.swift */; };
+		5050987C280C645C00E4CFD9 /* HotelTileVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050987B280C645C00E4CFD9 /* HotelTileVIew.swift */; };
+		5050987E280D4F4600E4CFD9 /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050987D280D4F4600E4CFD9 /* HotelDetailView.swift */; };
+		50509880280D613C00E4CFD9 /* TextOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050987F280D613C00E4CFD9 /* TextOverlay.swift */; };
+		50509882280D6BA500E4CFD9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509881280D6BA500E4CFD9 /* PageViewController.swift */; };
+		50509885280D825C00E4CFD9 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509884280D825C00E4CFD9 /* PageView.swift */; };
+		50509887280D85C700E4CFD9 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509886280D85C700E4CFD9 /* PageControl.swift */; };
 		509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0127F6FB5F0078968E /* EmailTextField.swift */; };
 		509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */; };
 		509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0727F7164B0078968E /* SecureInputView.swift */; };
@@ -80,6 +87,13 @@
 		5039885027F4E85600EA01CA /* EmailAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthView.swift; sourceTree = "<group>"; };
 		5039885227F502B200EA01CA /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		50509879280B368600E4CFD9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5050987B280C645C00E4CFD9 /* HotelTileVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTileVIew.swift; sourceTree = "<group>"; };
+		5050987D280D4F4600E4CFD9 /* HotelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailView.swift; sourceTree = "<group>"; };
+		5050987F280D613C00E4CFD9 /* TextOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOverlay.swift; sourceTree = "<group>"; };
+		50509881280D6BA500E4CFD9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		50509884280D825C00E4CFD9 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		50509886280D85C700E4CFD9 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		509F4A0127F6FB5F0078968E /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationView.swift; sourceTree = "<group>"; };
 		509F4A0727F7164B0078968E /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
@@ -177,6 +191,16 @@
 			path = SignInViews;
 			sourceTree = "<group>";
 		};
+		50509883280D804E00E4CFD9 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				50509881280D6BA500E4CFD9 /* PageViewController.swift */,
+				50509884280D825C00E4CFD9 /* PageView.swift */,
+				50509886280D85C700E4CFD9 /* PageControl.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		50FF5DDB27EF36E2009F1E80 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +254,7 @@
 				50FF5E0F27F0EB39009F1E80 /* NewsfeedViews */,
 				50FF5E0827F0E90D009F1E80 /* ChatViews */,
 				50FF5E0B27F0EA2D009F1E80 /* Profile */,
+				5050987F280D613C00E4CFD9 /* TextOverlay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +300,10 @@
 				50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */,
 				50FF5E0227F0A0C2009F1E80 /* LogoView.swift */,
 				50FF5E0027F09D20009F1E80 /* SearchModuleView.swift */,
+				50509879280B368600E4CFD9 /* SearchView.swift */,
+				5050987B280C645C00E4CFD9 /* HotelTileVIew.swift */,
+				5050987D280D4F4600E4CFD9 /* HotelDetailView.swift */,
+				50509883280D804E00E4CFD9 /* PageView */,
 			);
 			path = SearchViews;
 			sourceTree = "<group>";
@@ -377,23 +406,30 @@
 				500BF3EA27F78E9300C19F39 /* AuthManager.swift in Sources */,
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
 				5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */,
+				50509882280D6BA500E4CFD9 /* PageViewController.swift in Sources */,
 				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
 				509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */,
 				509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */,
 				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,
+				5050987A280B368600E4CFD9 /* SearchView.swift in Sources */,
 				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
 				500BF3FB27FC807500C19F39 /* SpinnerView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
 				500BF3F127FB1FE700C19F39 /* PasportTileView.swift in Sources */,
+				50509880280D613C00E4CFD9 /* TextOverlay.swift in Sources */,
+				5050987C280C645C00E4CFD9 /* HotelTileVIew.swift in Sources */,
+				5050987E280D4F4600E4CFD9 /* HotelDetailView.swift in Sources */,
 				500BF3F927FB9FCA00C19F39 /* ProfileView.swift in Sources */,
 				509F4A0A27F72C3F0078968E /* PrivacyPolicyView.swift in Sources */,
 				500BF3E727F77C2700C19F39 /* AuthViewModel.swift in Sources */,
 				50FF5DF827F081A1009F1E80 /* NewsfeedView.swift in Sources */,
 				50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */,
 				50FF5E0127F09D20009F1E80 /* SearchModuleView.swift in Sources */,
+				50509885280D825C00E4CFD9 /* PageView.swift in Sources */,
 				5039884627F461A900EA01CA /* AuthMethodsView.swift in Sources */,
 				50FF5E1127F2206C009F1E80 /* NewsTileView.swift in Sources */,
 				50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */,
+				50509887280D85C700E4CFD9 /* PageControl.swift in Sources */,
 				5039885327F502B200EA01CA /* EmailValidation.swift in Sources */,
 				50FF5E1527F32466009F1E80 /* SoucialMediaStackView.swift in Sources */,
 				500BF40227FCB5CF00C19F39 /* EmailAuthViewModel.swift in Sources */,
