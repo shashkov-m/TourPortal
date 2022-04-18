@@ -14,9 +14,20 @@ struct SearchView: View {
       LazyVStack {
         ForEach(resultArray) { hotel in
           HotelTileView(hotelName: hotel.shortName, cost: hotel.cost, address: hotel.address, rating: hotel.rating ?? 0, imageLinks: hotel.imagesURL ?? [""])
+            .frame(height: 350)
         }
       }
       .frame(maxWidth: .infinity)
+    }
+    .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+      ToolbarItem(placement: .principal) {
+        Text("Анапа / 14 июня / 7 ночей")
+          .font(.footnote)
+          .padding()
+          .background(.regularMaterial)
+          .cornerRadius(12)
+      }
     }
   }
 }

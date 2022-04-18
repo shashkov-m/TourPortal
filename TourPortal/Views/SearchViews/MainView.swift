@@ -14,6 +14,7 @@ struct MainView: View {
         VStack {
           LogoView(text: "Поиск выгодных\nтуров")
           SearchModuleView()
+            .padding(.top)
           PopularRoutesView()
           AvailableRoutesView()
         }
