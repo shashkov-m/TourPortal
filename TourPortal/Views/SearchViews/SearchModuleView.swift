@@ -45,7 +45,7 @@ struct SearchModuleView: View {
         WideButtonView(imageName: "", text: "Найти туры", backgroundColor: .yellow, textColor: .black, style: .titleOnly)
       }
     }
-    .frame(maxHeight: 250)
+    .frame(maxWidth: .infinity, maxHeight: 250)
   }
 }
 struct SearchModule_Previews: PreviewProvider {

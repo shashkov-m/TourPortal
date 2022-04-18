@@ -14,14 +14,16 @@ struct TextOverlay: View {
       startPoint: .bottom,
       endPoint: .center)
   }
+  var title: String
+  var subtitle: String
   var body: some View {
     ZStack(alignment: .bottomLeading) {
       gradient
       VStack(alignment: .leading) {
-        Text("Акварель-Family")
+        Text(title)
           .font(.title)
           .bold()
-        Text("★★★☆☆")
+        Text(subtitle)
       }
       .padding()
     }
@@ -31,6 +33,6 @@ struct TextOverlay: View {
 
 struct TextOverlay_Previews: PreviewProvider {
   static var previews: some View {
-    TextOverlay()
+    TextOverlay(title: "Акварель-Family", subtitle: "Акварель-Family")
   }
 }
