@@ -19,7 +19,7 @@ struct HotelTileVIew: View {
         }
         .cornerRadius(12)
 
-  Text("Россия, Тюменская область, Тюменский район,19 км Червишевского тракта, строение 1.")
+  Text("Россия, Тюменская область, Тюменский район, 19 км Червишевского тракта, строение 1.")
         .multilineTextAlignment(.leading)
         .font(.footnote)
         .foregroundColor(.gray)

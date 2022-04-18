@@ -38,6 +38,9 @@
 		50509882280D6BA500E4CFD9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509881280D6BA500E4CFD9 /* PageViewController.swift */; };
 		50509885280D825C00E4CFD9 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509884280D825C00E4CFD9 /* PageView.swift */; };
 		50509887280D85C700E4CFD9 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509886280D85C700E4CFD9 /* PageControl.swift */; };
+		50509889280DB26F00E4CFD9 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509888280DB26F00E4CFD9 /* Hotel.swift */; };
+		5050988B280DB8A700E4CFD9 /* SearchModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050988A280DB8A700E4CFD9 /* SearchModuleViewModel.swift */; };
+		5050988E280DBBD800E4CFD9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5050988D280DBBD800E4CFD9 /* Kingfisher */; };
 		509F4A0227F6FB5F0078968E /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0127F6FB5F0078968E /* EmailTextField.swift */; };
 		509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */; };
 		509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F4A0727F7164B0078968E /* SecureInputView.swift */; };
@@ -94,6 +97,8 @@
 		50509881280D6BA500E4CFD9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		50509884280D825C00E4CFD9 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		50509886280D85C700E4CFD9 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		50509888280DB26F00E4CFD9 /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		5050988A280DB8A700E4CFD9 /* SearchModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModuleViewModel.swift; sourceTree = "<group>"; };
 		509F4A0127F6FB5F0078968E /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		509F4A0527F70EFC0078968E /* EmailRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationView.swift; sourceTree = "<group>"; };
 		509F4A0727F7164B0078968E /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5050988E280DBBD800E4CFD9 /* Kingfisher in Frameworks */,
 				500BF3DD27F767C600C19F39 /* FirebaseAnalytics in Frameworks */,
 				500BF3E127F767C600C19F39 /* FirebaseFirestore in Frameworks */,
 				500BF3DF27F767C600C19F39 /* FirebaseAuth in Frameworks */,
@@ -143,6 +149,7 @@
 			children = (
 				500BF3F427FB456D00C19F39 /* Pasport.swift */,
 				50AA9FF127FF18420009F77B /* Credentials.swift */,
+				50509888280DB26F00E4CFD9 /* Hotel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 		500BF3E527F768D000C19F39 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5050988A280DB8A700E4CFD9 /* SearchModuleViewModel.swift */,
 				500BF3E627F77C2700C19F39 /* AuthViewModel.swift */,
 				500BF40127FCB5CF00C19F39 /* EmailAuthViewModel.swift */,
 			);
@@ -340,6 +348,7 @@
 				500BF3DE27F767C600C19F39 /* FirebaseAuth */,
 				500BF3E027F767C600C19F39 /* FirebaseFirestore */,
 				500BF3E227F767C600C19F39 /* FirebaseStorage */,
+				5050988D280DBBD800E4CFD9 /* Kingfisher */,
 			);
 			productName = TourPortal;
 			productReference = 50FF5DE427EF36E2009F1E80 /* TourPortal.app */;
@@ -371,6 +380,7 @@
 			packageReferences = (
 				5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */,
 				500BF3DB27F767C600C19F39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5050988C280DBBD800E4CFD9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 50FF5DE527EF36E2009F1E80 /* Products */;
 			projectDirPath = "";
@@ -418,6 +428,8 @@
 				500BF3F127FB1FE700C19F39 /* PasportTileView.swift in Sources */,
 				50509880280D613C00E4CFD9 /* TextOverlay.swift in Sources */,
 				5050987C280C645C00E4CFD9 /* HotelTileVIew.swift in Sources */,
+				50509889280DB26F00E4CFD9 /* Hotel.swift in Sources */,
+				5050988B280DB8A700E4CFD9 /* SearchModuleViewModel.swift in Sources */,
 				5050987E280D4F4600E4CFD9 /* HotelDetailView.swift in Sources */,
 				500BF3F927FB9FCA00C19F39 /* ProfileView.swift in Sources */,
 				509F4A0A27F72C3F0078968E /* PrivacyPolicyView.swift in Sources */,
@@ -684,6 +696,14 @@
 				kind = branch;
 			};
 		};
+		5050988C280DBBD800E4CFD9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -711,6 +731,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */;
 			productName = PartialSheet;
+		};
+		5050988D280DBBD800E4CFD9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5050988C280DBBD800E4CFD9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

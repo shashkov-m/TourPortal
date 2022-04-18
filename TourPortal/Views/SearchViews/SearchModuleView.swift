@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchModuleView: View {
+  private var viewModel = ViewModel()
   var body: some View {
     VStack (spacing: 12) {
       VStack {
@@ -39,7 +40,7 @@ struct SearchModuleView: View {
         .cornerRadius(16)
       }
       NavigationLink {
-        SearchView()
+        SearchView(resultArray: viewModel.searchResultExample)
       } label: {
         WideButtonView(imageName: "", text: "Найти туры", backgroundColor: .yellow, textColor: .black, style: .titleOnly)
       }
