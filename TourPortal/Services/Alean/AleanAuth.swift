@@ -17,7 +17,11 @@ final class AleanAuth {
   private let password = "testik"
   private let httpMethod = "POST"
   private let contentTypeHeader = (header: "Content-type", value: "text/xml")
-  private(set) var sessionID: String?
+  private(set) var sessionID: String? {
+    didSet {
+      print(sessionID)
+    }
+  }
   
   private init() { }
   
