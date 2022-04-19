@@ -90,9 +90,24 @@ final class Alean {
     let body = result.envelope().data(using: .utf8)
     var request = URLRequest(url: url)
     request.httpBody = body
-    request.httpMethod = "POST"
-    request.addValue("text/xml", forHTTPHeaderField: "Content-type")
+    request.httpMethod = httpMethod
+    request.addValue(contentTypeHeader.value, forHTTPHeaderField: contentTypeHeader.header)
     request.timeoutInterval = 15
+    return request
+  }
+  
+  private func makeHotelDetailsRequest(sessionID: String, hotelShortName: String) -> URLRequest? {
+    guard let url = AleanURLs.reservationServer.url else { return nil }
+    let header = "<m:GetHotelDescription xmlns:m=\"urn:webservice-electrasoft-ru:types-twsReservationServiceIntf-ItwsReservationService\" SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">"
+    let sessionID = "<SessionID xsi:type=\"string\">\(sessionID)</SessionID>"
+    let hotelShortName = "<HotelShortName xsi:type=\"xs:string\">\(hotelShortName)</HotelShortName>"
+    let footer = "</m:GetHotelDescription>"
+    let result = header + sessionID + hotelShortName + footer
+    let body = result.envelope().data(using: .utf8)
+    var request = URLRequest(url: url)
+    request.httpMethod = httpMethod
+    request.addValue(contentTypeHeader.value, forHTTPHeaderField: contentTypeHeader.header)
+    request.httpBody = body
     return request
   }
   
@@ -138,8 +153,20 @@ final class Alean {
     }
   }
   
+  func getHotelDetails(sessionID: String, hotelShortName: String) {
+    guard let requets = makeHotelDetailsRequest(sessionID: sessionID, hotelShortName: hotelShortName) else { return }
+  }
+  
   private func parseHotelData(xml: XML.Accessor) -> [Hotel] {
     var hotels = [Hotel]()
+    let xml = xml["ReservationAbodeTable"]
+    let hotelXML = xml["HotelList", "Hotel"]
+    let roomXML = xml["RoomCategoryList", "RoomCategory"]
+    let offerXML = xml["OfferList", "Offer"]
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ru")
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
     return hotels
   }
   
