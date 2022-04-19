@@ -30,6 +30,10 @@
 		5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039884E27F484FB00EA01CA /* WideButtonView.swift */; };
 		5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885027F4E85600EA01CA /* EmailAuthView.swift */; };
 		5039885327F502B200EA01CA /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5039885227F502B200EA01CA /* EmailValidation.swift */; };
+		5045F694280EBA7B0025F1E1 /* String+Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045F693280EBA7B0025F1E1 /* String+Envelope.swift */; };
+		5045F697280EC9AD0025F1E1 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 5045F696280EC9AD0025F1E1 /* SwiftyXMLParser */; };
+		5045F69A280ECA580025F1E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5045F699280ECA580025F1E1 /* Alamofire */; };
+		5045F69C280EE3270025F1E1 /* Alean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045F69B280EE3270025F1E1 /* Alean.swift */; };
 		5050981F2800458100E4CFD9 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */; };
 		5050987A280B368600E4CFD9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50509879280B368600E4CFD9 /* SearchView.swift */; };
 		5050987C280C645C00E4CFD9 /* HotelTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050987B280C645C00E4CFD9 /* HotelTileView.swift */; };
@@ -89,6 +93,8 @@
 		5039884E27F484FB00EA01CA /* WideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonView.swift; sourceTree = "<group>"; };
 		5039885027F4E85600EA01CA /* EmailAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthView.swift; sourceTree = "<group>"; };
 		5039885227F502B200EA01CA /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		5045F693280EBA7B0025F1E1 /* String+Envelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Envelope.swift"; sourceTree = "<group>"; };
+		5045F69B280EE3270025F1E1 /* Alean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alean.swift; sourceTree = "<group>"; };
 		5050981E2800458100E4CFD9 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		50509879280B368600E4CFD9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5050987B280C645C00E4CFD9 /* HotelTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTileView.swift; sourceTree = "<group>"; };
@@ -133,8 +139,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5050988E280DBBD800E4CFD9 /* Kingfisher in Frameworks */,
+				5045F69A280ECA580025F1E1 /* Alamofire in Frameworks */,
 				500BF3DD27F767C600C19F39 /* FirebaseAnalytics in Frameworks */,
 				500BF3E127F767C600C19F39 /* FirebaseFirestore in Frameworks */,
+				5045F697280EC9AD0025F1E1 /* SwiftyXMLParser in Frameworks */,
 				500BF3DF27F767C600C19F39 /* FirebaseAuth in Frameworks */,
 				500BF3E327F767C600C19F39 /* FirebaseStorage in Frameworks */,
 				5039884927F46A3000EA01CA /* PartialSheet in Frameworks */,
@@ -197,6 +205,14 @@
 				500BF3F027FB1FE700C19F39 /* PasportTileView.swift */,
 			);
 			path = SignInViews;
+			sourceTree = "<group>";
+		};
+		5045F690280EB60B0025F1E1 /* Alean */ = {
+			isa = PBXGroup;
+			children = (
+				5045F69B280EE3270025F1E1 /* Alean.swift */,
+			);
+			path = Alean;
 			sourceTree = "<group>";
 		};
 		50509883280D804E00E4CFD9 /* PageView */ = {
@@ -269,9 +285,11 @@
 		50FF5DFD27F08C5F009F1E80 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5045F690280EB60B0025F1E1 /* Alean */,
 				5039885227F502B200EA01CA /* EmailValidation.swift */,
 				500BF3E927F78E9300C19F39 /* AuthManager.swift */,
 				500BF3F627FB95C000C19F39 /* PasportsManager.swift */,
+				5045F693280EBA7B0025F1E1 /* String+Envelope.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,6 +367,8 @@
 				500BF3E027F767C600C19F39 /* FirebaseFirestore */,
 				500BF3E227F767C600C19F39 /* FirebaseStorage */,
 				5050988D280DBBD800E4CFD9 /* Kingfisher */,
+				5045F696280EC9AD0025F1E1 /* SwiftyXMLParser */,
+				5045F699280ECA580025F1E1 /* Alamofire */,
 			);
 			productName = TourPortal;
 			productReference = 50FF5DE427EF36E2009F1E80 /* TourPortal.app */;
@@ -381,6 +401,8 @@
 				5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */,
 				500BF3DB27F767C600C19F39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				5050988C280DBBD800E4CFD9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				5045F695280EC9AD0025F1E1 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
+				5045F698280ECA580025F1E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 50FF5DE527EF36E2009F1E80 /* Products */;
 			projectDirPath = "";
@@ -422,6 +444,7 @@
 				509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */,
 				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,
 				5050987A280B368600E4CFD9 /* SearchView.swift in Sources */,
+				5045F694280EBA7B0025F1E1 /* String+Envelope.swift in Sources */,
 				50FF5E1927F34844009F1E80 /* OfficeMapView.swift in Sources */,
 				500BF3FB27FC807500C19F39 /* SpinnerView.swift in Sources */,
 				50FF5DFF27F08C7C009F1E80 /* TextIconLabelStyle.swift in Sources */,
@@ -455,6 +478,7 @@
 				50FF5DF627EF38DF009F1E80 /* MainView.swift in Sources */,
 				50FF5E0D27F0EA3C009F1E80 /* AuthView.swift in Sources */,
 				50FF5E1B27F3A125009F1E80 /* PhoneCallButtonView.swift in Sources */,
+				5045F69C280EE3270025F1E1 /* Alean.swift in Sources */,
 				50FF5DE827EF36E2009F1E80 /* TourPortalApp.swift in Sources */,
 				500BF3F727FB95C000C19F39 /* PasportsManager.swift in Sources */,
 				500BF3F527FB456D00C19F39 /* Pasport.swift in Sources */,
@@ -599,7 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TourPortal/TourPortal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"TourPortal/Preview Content\"";
 				DEVELOPMENT_TEAM = 6J7BMHDBAB;
 				ENABLE_PREVIEWS = YES;
@@ -631,7 +655,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TourPortal/TourPortal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"TourPortal/Preview Content\"";
 				DEVELOPMENT_TEAM = 6J7BMHDBAB;
 				ENABLE_PREVIEWS = YES;
@@ -696,6 +720,22 @@
 				kind = branch;
 			};
 		};
+		5045F695280EC9AD0025F1E1 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5045F698280ECA580025F1E1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		5050988C280DBBD800E4CFD9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -731,6 +771,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5039884727F46A3000EA01CA /* XCRemoteSwiftPackageReference "PartialSheet" */;
 			productName = PartialSheet;
+		};
+		5045F696280EC9AD0025F1E1 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5045F695280EC9AD0025F1E1 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		5045F699280ECA580025F1E1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5045F698280ECA580025F1E1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		5050988D280DBBD800E4CFD9 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

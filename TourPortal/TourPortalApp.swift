@@ -14,6 +14,7 @@ struct TourPortalApp: App {
   init() {
     FirebaseApp.configure()
     self._authManager = StateObject(wrappedValue: AuthManager())
+    Alean.shared.auth()
   }
   var body: some Scene {
     WindowGroup {
