@@ -27,3 +27,4 @@ struct LogoView_Previews: PreviewProvider {
     LogoView(text: "Поиск выгодных\nтуров")
   }
 }
+
