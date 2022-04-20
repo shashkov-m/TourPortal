@@ -15,5 +15,9 @@ struct Hotel: Identifiable {
   let rating: Int?
   let address: String
   let imagesURL: [String]?
-  
+}
+
+struct HotelDetails {
+  let description: String
+  let images: [String]
 }

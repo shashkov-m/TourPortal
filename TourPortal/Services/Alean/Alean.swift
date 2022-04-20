@@ -10,13 +10,12 @@ import SwiftyXMLParser
 import Alamofire
 
 final class Alean {
-  static let shared = Alean()
   private let login = "Test"
   private let password = "testik"
   private let httpMethod = "POST"
   private let contentTypeHeader = (header: "Content-type", value: "text/xml")
   private(set) var sessionID: String?
-  private let aleanQueue = DispatchQueue(label: "AleanQueue", qos: .userInitiated)
+  private let aleanQueue = DispatchQueue(label: "AleanQueue", qos: .userInitiated, attributes: .concurrent)
   
   private enum AleanURLs: String {
     private var baseURL: String {
@@ -30,8 +29,6 @@ final class Alean {
       return url.appendingPathComponent(self.rawValue)
     }
   }
-  
-  private init() { }
   
   private enum AleanError: Error {
     case cannotGetDataFromResponse
@@ -148,16 +145,23 @@ final class Alean {
       }
       guard let self = self else { return }
       let xml = XML.parse(data)
-      let result = self.parseHotelData(xml: xml)
+      guard let xmlBodyText = xml["SOAP-ENV:Envelope", "SOAP-ENV:Body", "NS1:GetAbodeReservationTableResponse", "return"].text else { return }
+      guard let xmlBody = try? XML.parse(xmlBodyText) else { return }
+      let result = self.parseHotelData(xml: xmlBody, sessionID: sessionID)
       completion(.success(result))
     }
   }
   
-  func getHotelDetails(sessionID: String, hotelShortName: String) {
+  func getHotelDetails(sessionID: String, hotelShortName: String, completion: @escaping (XML.Accessor) -> ()) {
     guard let requets = makeHotelDetailsRequest(sessionID: sessionID, hotelShortName: hotelShortName) else { return }
+    AF.request(requets).response { restponse in
+      guard let data = restponse.data else { return }
+      let xml = XML.parse(data)
+      completion(xml)
+    }
   }
   
-  private func parseHotelData(xml: XML.Accessor) -> [Hotel] {
+  private func parseHotelData(xml: XML.Accessor, sessionID: String) -> [Hotel] {
     var hotels = [Hotel]()
     let xml = xml["ReservationAbodeTable"]
     let hotelXML = xml["HotelList", "Hotel"]
@@ -167,7 +171,20 @@ final class Alean {
     dateFormatter.locale = Locale(identifier: "ru")
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
     
+    for hotelElement in hotelXML {
+      let hotelDictionary = hotelElement.attributes
+      guard let id = hotelDictionary["HotelID"],
+            let hotelName = hotelDictionary["Name"],
+            let hotelShortName = hotelDictionary["ShortName"]
+      else {
+        continue
+      }
+      getHotelDetails(sessionID: sessionID, hotelShortName: hotelShortName) { xml in
+        print("*** HOTEL DETAILS for ***", hotelName)
+        let hotel = Hotel(id: id, name: hotelName, shortName: hotelShortName, cost: 10.0, rating: 1, address: "test", imagesURL: nil)
+        hotels.append(hotel)
+      }
+    }
     return hotels
   }
-  
 }

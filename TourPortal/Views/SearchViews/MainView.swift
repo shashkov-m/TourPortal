@@ -17,6 +17,18 @@ struct MainView: View {
             .padding(.top)
           PopularRoutesView()
           AvailableRoutesView()
+          Button {
+            Alean.shared.getTourList(departureCity: "Анапа", from: Date(timeIntervalSinceNow: 605_000), till: Date(timeIntervalSinceNow: 805_000), durationMin: 5, durationMax: 8) { result in
+              switch result {
+              case .success(let data):
+                print("data", data)
+              case .failure(let error):
+                print(error)
+              }
+            }
+          } label: {
+            Text("Alean")
+          }
         }
       }
       .padding()
