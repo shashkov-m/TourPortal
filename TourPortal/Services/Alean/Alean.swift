@@ -181,7 +181,7 @@ final class Alean {
       }
       getHotelDetails(sessionID: sessionID, hotelShortName: hotelShortName) { xml in
         print("*** HOTEL DETAILS for ***", hotelName)
-        let hotel = Hotel(id: id, name: hotelName, shortName: hotelShortName, cost: 10.0, rating: 1, address: "test", imagesURL: nil)
+        let hotel = Hotel(id: id, name: hotelName, shortName: hotelShortName, cost: 10.0, rating: 1, address: "test", imagesURL: nil, coordinates: nil)
         hotels.append(hotel)
       }
     }

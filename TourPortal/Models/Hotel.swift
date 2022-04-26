@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Hotel: Identifiable {
   let id: String
@@ -15,6 +16,7 @@ struct Hotel: Identifiable {
   let rating: Int?
   let address: String
   let imagesURL: [String]?
+  let coordinates: CLLocationCoordinate2D?
 }
 
 struct HotelDetails {
