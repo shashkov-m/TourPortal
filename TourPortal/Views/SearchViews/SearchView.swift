@@ -13,7 +13,7 @@ struct SearchView: View {
     ScrollView (.vertical, showsIndicators: true) {
       LazyVStack {
         ForEach(viewModel.searchResultExample) { hotel in
-          HotelTileView(hotelName: hotel.shortName, cost: hotel.cost, address: hotel.address, rating: hotel.rating ?? 0, imageLinks: hotel.imagesURL ?? [""])
+          HotelTileView(hotel: hotel)
             .frame(height: 350)
         }
       }

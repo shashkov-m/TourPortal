@@ -14,13 +14,17 @@ struct PageView<Page: View>: View {
     ZStack(alignment: .bottomTrailing) {
       PageViewController(pages: pages, currentPage: $currentPage)
       PageControl(numberOfPages: pages.count, currentPage: $currentPage)
+        .frame(maxWidth: 150)
     }
   }
 }
 
 struct PageView_Previews: PreviewProvider {
   static var previews: some View {
-    let pages = [Image("0"), Image("1"), Image("2"), Image("3")]
+    let pages = [Image("0").resizable(), Image("1"), Image("2"), Image("3")]
     PageView(pages: pages)
+      .frame(maxWidth: .infinity, maxHeight: 250)
+      .cornerRadius(12)
+      .padding()
   }
 }
