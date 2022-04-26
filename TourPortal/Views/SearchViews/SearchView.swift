@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SearchView: View {
-  var resultArray: [Hotel]
+  var viewModel = SearchViewModel()
   var body: some View {
     ScrollView (.vertical, showsIndicators: true) {
       LazyVStack {
-        ForEach(resultArray) { hotel in
-          HotelTileView(hotelName: hotel.shortName, cost: hotel.cost, address: hotel.address, rating: hotel.rating ?? 0, imageLinks: hotel.imagesURL ?? [""])
+        ForEach(viewModel.searchResultExample) { hotel in
+          HotelTileView(hotel: hotel)
             .frame(height: 350)
         }
       }
@@ -34,7 +34,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
   static var previews: some View {
-    let resultArray = [Hotel(id: "0", name: "ALEAN FAMILY RESORT & RIVIERA 4*", shortName: "ALEAN RIVIERA 4*", cost: 96000.00, rating: 4, address: "Краснодарский край, г. Анапа, Пионерский пр., 28", imagesURL: [""])]
-    SearchView(resultArray: resultArray)
+    SearchView()
   }
 }
