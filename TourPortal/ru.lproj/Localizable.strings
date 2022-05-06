@@ -7,19 +7,24 @@
 */
 
 //MARK: - Strings
+"Brand" = "Tour Portal";
 "Sign in to your profile" = "Войдите в профиль";
 "Sign in promo" = "Автозаполнение пассажиров,\nсинхронизация между устройствами\n и подписки на цену";
 "Sign in" = "Вход в профиль";
 "Sign in promo 2" = "Создавайте подписки на изменения цен, сохраняйте паспорта для будущих покупок.";
 "Privacy policy" = "Авторизуясь, вы соглашаетесь с\n Лицензионным соглашением и Политикой конфиденциальности";
 "Error" = "Ошибка";
+"Contact info title" = "Поможем выбрать тур и решить вопросы во время путешествия, а так же ответим на вопросы по работе приложения";
+
 //MARK: - Buttons
 "Sign in button" = "Войти";
 "Sign up button" = "Зарегистрироваться";
 "OK" = "OK";
+
 //MARK: - Placeholders
 "Email placeholder" = "Email адрес";
 "Password placeholder" = "Пароль";
+
 //MARK: - Navigation Titles
 "Sign in nav title" = "Авторизация";
 "Sign up nav title" = "Регистрация";

@@ -63,7 +63,7 @@
 		50FF5E0327F0A0C2009F1E80 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0227F0A0C2009F1E80 /* LogoView.swift */; };
 		50FF5E0527F0A734009F1E80 /* PopularRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */; };
 		50FF5E0727F0A99E009F1E80 /* AvailableRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */; };
-		50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0927F0E925009F1E80 /* ChatView.swift */; };
+		50FF5E0A27F0E925009F1E80 /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0927F0E925009F1E80 /* ContactInfoView.swift */; };
 		50FF5E0D27F0EA3C009F1E80 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E0C27F0EA3C009F1E80 /* AuthView.swift */; };
 		50FF5E1127F2206C009F1E80 /* NewsTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1027F2206C009F1E80 /* NewsTileView.swift */; };
 		50FF5E1327F25A06009F1E80 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FF5E1227F25A06009F1E80 /* NewsDetailView.swift */; };
@@ -125,7 +125,7 @@
 		50FF5E0227F0A0C2009F1E80 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		50FF5E0427F0A734009F1E80 /* PopularRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRoutesView.swift; sourceTree = "<group>"; };
 		50FF5E0627F0A99E009F1E80 /* AvailableRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRoutesView.swift; sourceTree = "<group>"; };
-		50FF5E0927F0E925009F1E80 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		50FF5E0927F0E925009F1E80 /* ContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoView.swift; sourceTree = "<group>"; };
 		50FF5E0C27F0EA3C009F1E80 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		50FF5E1027F2206C009F1E80 /* NewsTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTileView.swift; sourceTree = "<group>"; };
 		50FF5E1227F25A06009F1E80 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
@@ -308,7 +308,7 @@
 		50FF5E0827F0E90D009F1E80 /* ChatViews */ = {
 			isa = PBXGroup;
 			children = (
-				50FF5E0927F0E925009F1E80 /* ChatView.swift */,
+				50FF5E0927F0E925009F1E80 /* ContactInfoView.swift */,
 				50FF5E1A27F3A125009F1E80 /* PhoneCallButtonView.swift */,
 				50FF5E1427F32466009F1E80 /* SoucialMediaStackView.swift */,
 				50FF5E1627F331F8009F1E80 /* OfficeInfoView.swift */,
@@ -450,7 +450,7 @@
 				50FF5DEA27EF36E2009F1E80 /* MainTabView.swift in Sources */,
 				5039885127F4E85600EA01CA /* EmailAuthView.swift in Sources */,
 				50509882280D6BA500E4CFD9 /* PageViewController.swift in Sources */,
-				50FF5E0A27F0E925009F1E80 /* ChatView.swift in Sources */,
+				50FF5E0A27F0E925009F1E80 /* ContactInfoView.swift in Sources */,
 				509F4A0627F70EFC0078968E /* EmailRegistrationView.swift in Sources */,
 				509F4A0827F7164B0078968E /* SecureInputView.swift in Sources */,
 				5039884F27F484FB00EA01CA /* WideButtonView.swift in Sources */,

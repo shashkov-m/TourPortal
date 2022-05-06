@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LogoView: View {
-  var text:String
+  var text: LocalizedStringKey
+  private let brandImageName = "logo2"
   var body: some View {
     VStack (spacing: 0) {
-      Image ("logo2")
+      Image (brandImageName)
         .resizable()
         .frame(width: 70, height: 80)
         .scaledToFit()
@@ -24,7 +25,7 @@ struct LogoView: View {
 
 struct LogoView_Previews: PreviewProvider {
   static var previews: some View {
-    LogoView(text: "Поиск выгодных\nтуров")
+    LogoView(text: "Brand")
   }
 }
 

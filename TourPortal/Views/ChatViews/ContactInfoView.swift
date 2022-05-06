@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  ContactInfoView.swift
 //  TourPortal
 //
 //  Created by Max Shashkov on 27.03.2022.
@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct ChatView: View {
+struct ContactInfoView: View {
   var body: some View {
     ScrollView (.vertical, showsIndicators: false) {
       VStack(spacing: 0) {
-        LogoView(text: "TOUR PORTAL")
-        Text ("""
-Поможем выбрать тур и решить вопросы во время путешествия, а так же ответим на вопросы по работе приложения
-""")
+        LogoView(text: "Brand")
+        Text ("Contact info title")
         .multilineTextAlignment(.center)
         .font(.body)
         .foregroundColor(.secondary)
@@ -37,8 +35,8 @@ struct ChatView: View {
   }
 }
 
-struct ChatView_Previews: PreviewProvider {
+struct ContactInfoView_Previews: PreviewProvider {
   static var previews: some View {
-    ChatView()
+    ContactInfoView()
   }
 }
