@@ -14,7 +14,7 @@ struct PhoneCallButtonView: View {
       guard let url = url else { return }
       UIApplication.shared.open(url)
     }) {
-      Label("Позвонить", systemImage: "phone.fill")
+      Label("Call button", systemImage: "phone.fill")
     }
     .padding()
     .foregroundColor(.blue)

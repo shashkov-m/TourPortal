@@ -20,7 +20,7 @@ struct ContactInfoView: View {
         PhoneCallButtonView()
         Divider()
           .padding()
-        Text("Свяжитесь с нами в соцсетях и\nмессенджерах")
+        Text("Contact info title2")
           .font(.body)
           .multilineTextAlignment(.center)
           .foregroundColor(.secondary)
