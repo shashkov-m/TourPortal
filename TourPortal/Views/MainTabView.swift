@@ -19,7 +19,7 @@ struct MainTabView: View {
           .tabItem {
             Label("Тур Блог", systemImage: "newspaper")
           }
-        ChatView()
+        ContactInfoView()
           .tabItem {
             Label("Контакты", systemImage: "phone.fill")
           }

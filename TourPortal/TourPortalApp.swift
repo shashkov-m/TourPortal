@@ -10,10 +10,10 @@ import Firebase
 
 @main
 struct TourPortalApp: App {
-  @StateObject var authManager: AuthManager
+  @StateObject var authManager = AuthManager()
   init() {
     FirebaseApp.configure()
-    self._authManager = StateObject(wrappedValue: AuthManager())
+//    self._authManager = StateObject(wrappedValue: AuthManager())
   }
   var body: some Scene {
     WindowGroup {

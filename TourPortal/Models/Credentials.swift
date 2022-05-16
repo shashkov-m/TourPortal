@@ -5,7 +5,7 @@
 //  Created by Max Shashkov on 07.04.2022.
 //
 
-import SwiftUI
+import Foundation
 
 struct Credentials {
   var password: String = ""

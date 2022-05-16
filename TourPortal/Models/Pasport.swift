@@ -23,8 +23,8 @@ struct Pasport: Identifiable {
   var noExpirationDate: Bool
   var noPatronymic: Bool
   
-  enum Sex: String {
-    case male = "Мужской"
-    case female = "Женский"
+  enum Sex {
+    case male
+    case female
   }
 }
