@@ -32,6 +32,7 @@ struct ContactInfoView: View {
         OfficeMapView()
       }
     }
+    .padding(.top, 1)
   }
 }
 

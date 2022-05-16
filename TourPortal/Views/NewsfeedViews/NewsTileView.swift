@@ -10,7 +10,7 @@ import SwiftUI
 struct NewsTileView: View {
   var image: Image
   var body: some View {
-    ZStack (alignment: .bottomLeading) {
+    ZStack(alignment: .bottomLeading) {
       image
         .resizable()
         .scaledToFill()
@@ -19,10 +19,10 @@ struct NewsTileView: View {
         .overlay(Color.black.opacity(0.2))
         .cornerRadius(24)
         .padding()
-      VStack (alignment: .leading, spacing: 6) {
-        Text ("Текст анонса\nновости")
+      VStack(alignment: .leading, spacing: 6) {
+        Text("Текст анонса\nновости")
           .font(.largeTitle)
-        Text ("Субтекст краткое описание")
+        Text("Субтекст краткое описание")
           .font(.headline)
       }
       .foregroundColor(.white)
